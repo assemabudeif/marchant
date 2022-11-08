@@ -4,6 +4,7 @@ import 'package:marchant/presentation/home/home_screen.dart';
 import 'package:marchant/presentation/resources/assets_manager.dart';
 import 'package:marchant/presentation/resources/strings_manager.dart';
 
+import '../../categories/categories_screen.dart';
 part 'home_state.dart';
 
 class HomeCubit extends Cubit<HomeState> {
@@ -59,7 +60,7 @@ class HomeCubit extends Cubit<HomeState> {
       case 0:
         return const HomeScreen();
       case 1:
-        return Container();
+        return CategoriesScreen();
       case 2:
         return Container();
       case 3:

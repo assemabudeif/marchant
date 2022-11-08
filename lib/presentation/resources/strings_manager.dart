@@ -85,4 +85,24 @@ of the printing and typesetting
   static const String cart = 'Cart';
   static const String orders = 'Orders';
   static const String setting = 'Setting';
+
+  //Categories Screen
+  static const String foodProducts = 'Food Products';
+  static const String restaurant = 'Restaurant';
+
+  //Restaurant Screen
+  static const String commonRestaurants = 'Common Restaurants';
+  static const String nearestRestaurants = 'Nearest Restaurants';
+  static const String showAll = 'Show All';
+  static const String kfc = 'KFC';
+  static const String macRestaurant = 'MacDonalds';
+  static const String hardees = 'Hardees';
+  static const String available24Hours = 'Available 24 Hours';
+  static const String fastFood = 'Fast Food';
+
+  //Food Products
+  static const String commonMarkets = 'Common Markets';
+  static const String nearestMarkets = 'Nearest Markets';
+
+
 }

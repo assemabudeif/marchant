@@ -4,7 +4,7 @@ import 'package:marchant/presentation/auth/forget_password/forget_password_scree
 import 'package:marchant/presentation/auth/forget_password/set_new_password_screen.dart';
 import 'package:marchant/presentation/auth/login/login_screen.dart';
 import 'package:marchant/presentation/auth/register/register_screen.dart';
-
+import 'package:marchant/presentation/categories/categories_screen.dart';
 import 'package:marchant/presentation/guide/guide_screen.dart';
 import 'package:marchant/presentation/home/home_layout.dart';
 import 'package:marchant/presentation/location/choose_location_screen.dart';
@@ -23,6 +23,7 @@ class Routes {
   static const chooseLocationRoute = '/chooseLocation';
   static const ads = '/ads';
   static const home = '/home';
+  static const categories = '/categories';
 }
 
 class AppRoutes {
@@ -51,6 +52,10 @@ class AppRoutes {
       case Routes.chooseLocationRoute:
         return MaterialPageRoute(
             builder: (context) => const ChooseLocationScreen());
+      case Routes.categories:
+        return MaterialPageRoute(
+            builder: (context) =>   CategoriesScreen());
+
       // default:
       //   return defaultRoute();
     }
