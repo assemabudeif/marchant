@@ -104,5 +104,47 @@ of the printing and typesetting
   static const String commonMarkets = 'Common Markets';
   static const String nearestMarkets = 'Nearest Markets';
 
+  //Account
+  static const String  myAccount  = 'My Account';
+  static const String wishList   = 'Wish List';
+  static const String  myOrders  = 'My Orders';
+  static const String  savedAddresses  = 'Saved Addresses';
+  static const String  settings  = 'Settings';
+  static const String aboutApplication   = 'About Application';
+  static const String privacyPolicy   = 'Privacy policy';
+  static const String termsAndConditions   = 'Terms and conditions';
+  static const String  callUs  = 'Call Us';
+  static const String  facebook  = 'Facebook';
+  static const String  twitter  = 'Twitter';
+  static const String instagram   = 'Instagram';
+  static const String  shareAppWithFriends  = 'Share App With Friends';
+  static const String  rateApplication  = 'Rate Application';
+  static const String   helpFAQ = 'Help   FAQ';
+  static const String   legal = 'Legal … V 31';
+  static const String  logOut  = 'Log Out';
 
+  //Account Information
+  static const String accountInformation = 'Account Information';
+  static const String update = 'Update';
+  static const String editPassword = 'Edit Password';
+  static const String name = 'Name';
+  static const String phone = 'Mobile Number';
+
+  //Change Password
+  static const String enterNewPassword = 'Enter New Password';
+  static const String enterOldPassword = 'Enter Old Password';
+  static const String confirmNewPassword = 'Confirm New Password';
+  static const String save = 'Save';
+
+  static const String  aboutUs  = 'About us';
+
+  //contact us
+  static const String  contactus   = 'Contact us';
+  static const String  messageType   = 'Message Type';
+  static const String  messageContent   = 'Message Content';
+  static const String  contactUsNow   = 'Contact us now!';
+  static const String  thankYouForContactUs   = 'Thank You For Contact Us';
+  static const String messageWillSendToYourEmail   = 'Message Will Send to Your Email';
+  static const String complaint   = 'Complaint';
+  static const String suggestion   = 'Suggestion';
 }

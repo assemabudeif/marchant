@@ -134,7 +134,7 @@ class HomeScreen extends StatelessWidget {
                       height: MediaQuery.of(context).size.height * 0.01,
                     ),
                     SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.23,
+                      height: AppSize.s155,
                       child: ListView.separated(
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) {
@@ -176,7 +176,7 @@ class HomeScreen extends StatelessWidget {
                       height: MediaQuery.of(context).size.height * 0.01,
                     ),
                     SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.23,
+                      height: AppSize.s155,
                       child: ListView.separated(
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) {
@@ -218,7 +218,7 @@ class HomeScreen extends StatelessWidget {
                       height: MediaQuery.of(context).size.height * 0.01,
                     ),
                     SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.23,
+                      height: AppSize.s155,
                       child: ListView.separated(
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) {

@@ -11,10 +11,13 @@ import '../resources/strings_manager.dart';
 class SliverAppBarWidget extends StatelessWidget {
   final Function onSkipButtonPressed;
   final bool isBackButtonVisible;
-  const SliverAppBarWidget(
+  final bool isSkipButtonVisible ;
+   SliverAppBarWidget(
       {Key? key,
       required this.onSkipButtonPressed,
-      required this.isBackButtonVisible})
+      required this.isBackButtonVisible,
+        this.isSkipButtonVisible = true,
+      })
       : super(key: key);
 
   @override
@@ -39,7 +42,7 @@ class SliverAppBarWidget extends StatelessWidget {
               },
             )
           : null,
-      actions: [
+      actions:isSkipButtonVisible? [
         TextButton(
           onPressed: () {
             onSkipButtonPressed();
@@ -52,7 +55,7 @@ class SliverAppBarWidget extends StatelessWidget {
                 ),
           ),
         ),
-      ],
+      ] : null,
       flexibleSpace: FlexibleSpaceBar(
         background: Padding(
           padding: const EdgeInsets.all(AppPadding.p26),
