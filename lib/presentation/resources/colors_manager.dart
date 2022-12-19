@@ -16,6 +16,7 @@ class ColorManager {
   static const Color grey1 = Color(0xFFe0e0e0);
   static const Color grey2 = Color(0xFFbdbdbd);
   static const Color grey3 = Color(0xFF707070);
+  static const Color grey4 = Color(0xFF8e8e8e);
   static const Color greyDark = Color(0xFF646464);
   static const Color facebook = Color(0xFF3b5998);
   static const Color google = Color(0xFFde5246);

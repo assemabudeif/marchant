@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:marchant/presentation/categories/cubit/categories_cubit.dart';
+import 'package:marchant/presentation/contact_us/cubit/contact_us_cubit.dart';
 import 'package:marchant/presentation/home/cubit/home_cubit.dart';
 import 'package:marchant/presentation/resources/colors_manager.dart';
 import 'package:marchant/presentation/resources/values_manager.dart';
@@ -15,6 +16,7 @@ class HomeLayout extends StatelessWidget {
       providers: [
         BlocProvider(create: (BuildContext context) => HomeCubit()),
         BlocProvider(create: (BuildContext context) => CategoriesCubit()),
+        BlocProvider(create: (BuildContext context) => ContactUsCubit()),
       ],
       child: BlocConsumer<HomeCubit, HomeState>(
         listener: (context, state) {

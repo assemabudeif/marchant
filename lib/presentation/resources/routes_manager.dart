@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:marchant/presentation/about/about_app_screen.dart';
+import 'package:marchant/presentation/account/account_screen.dart';
+import 'package:marchant/presentation/account/accountn_iformation_screen.dart';
+import 'package:marchant/presentation/change_password/change_password_screen.dart';
 import 'package:marchant/presentation/ads/ads_screen.dart';
 import 'package:marchant/presentation/auth/forget_password/forget_password_screen.dart';
 import 'package:marchant/presentation/auth/forget_password/set_new_password_screen.dart';
 import 'package:marchant/presentation/auth/login/login_screen.dart';
 import 'package:marchant/presentation/auth/register/register_screen.dart';
 import 'package:marchant/presentation/categories/categories_screen.dart';
+import 'package:marchant/presentation/contact_us/contact_us_screen.dart';
 import 'package:marchant/presentation/guide/guide_screen.dart';
 import 'package:marchant/presentation/home/home_layout.dart';
 import 'package:marchant/presentation/location/choose_location_screen.dart';
 import 'package:marchant/presentation/location/location_screen.dart';
+import 'package:marchant/presentation/policy/privacy_policy_screen.dart';
 
 import 'package:marchant/presentation/resources/strings_manager.dart';
 
@@ -24,6 +30,12 @@ class Routes {
   static const ads = '/ads';
   static const home = '/home';
   static const categories = '/categories';
+  static const account = '/account';
+  static const accountInformation = '/accountInformation';
+  static const changePassword = '/change_Password';
+  static const about = '/about';
+  static const policy = '/policy';
+  static const contactUs = '/contact_us';
 }
 
 class AppRoutes {
@@ -54,9 +66,26 @@ class AppRoutes {
             builder: (context) => const ChooseLocationScreen());
       case Routes.categories:
         return MaterialPageRoute(
-            builder: (context) =>   CategoriesScreen());
-
-      // default:
+            builder: (context) =>   const CategoriesScreen());
+      case Routes.account:
+        return MaterialPageRoute(
+            builder: (context) =>   const AccountScreen());
+      case Routes.accountInformation:
+        return MaterialPageRoute(
+            builder: (context) =>   const AccountInformationScreen());
+      case Routes.changePassword:
+        return MaterialPageRoute(
+            builder: (context) =>   const ChangePasswordScreen());
+      case Routes.about:
+        return MaterialPageRoute(
+            builder: (context) =>   const AboutAppScreen());
+      case Routes.policy:
+        return MaterialPageRoute(
+            builder: (context) =>   const PrivacyPolicyScreen());
+      case Routes.contactUs:
+        return MaterialPageRoute(
+            builder: (context) =>    ContactusScreen());
+    // default:
       //   return defaultRoute();
     }
   }

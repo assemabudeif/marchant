@@ -104,7 +104,7 @@ class CategoryItemScreenWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: AppPadding.p12),
               child: SizedBox(
-                height: AppSize.s147,
+                height: 152,
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) => CategoryCommonListItemWidget(

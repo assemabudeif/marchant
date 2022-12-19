@@ -21,6 +21,9 @@ ThemeData getApplicationTheme() {
       backgroundColor: ColorManager.primaryLight,
       elevation: 0,
       systemOverlayStyle: SystemUiOverlayStyle.light,
+      iconTheme: IconThemeData(
+        color: ColorManager.accent,
+      )
     ),
 
     // buttons Theme
@@ -28,8 +31,8 @@ ThemeData getApplicationTheme() {
     //elevated Button Theme
 
     // textTheme
-    textTheme: const TextTheme(
-      titleLarge: TextStyle(
+    textTheme: TextTheme(
+      titleLarge:  TextStyle(
         fontSize: AppSize.s32,
         fontWeight: FontWeightManager.regular,
         color: ColorManager.white,
@@ -52,6 +55,13 @@ ThemeData getApplicationTheme() {
         fontWeight: FontWeightManager.bold,
         color: ColorManager.grey3,
       ),
+/*
+      bodyText2: TextStyle(
+        fontSize: AppSize.s15,
+        fontWeight: FontWeightManager.bold,
+        color: ColorManager.greyDark,
+      ),
+*/
     ),
 
     //input decoration theme (text form field)
