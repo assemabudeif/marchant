@@ -14,8 +14,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
         backgroundColor: ColorManager.white,
         centerTitle: true,
         title: Text(
-          'Privacy Policy',
-          //          StringsManager.privacyPolicy,
+                    StringsManager.privacyPolicy,
           style: Theme.of(context).textTheme.titleSmall!.copyWith(
             color: ColorManager.primary,
           ),

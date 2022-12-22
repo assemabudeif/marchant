@@ -147,4 +147,33 @@ of the printing and typesetting
   static const String messageWillSendToYourEmail   = 'Message Will Send to Your Email';
   static const String complaint   = 'Complaint';
   static const String suggestion   = 'Suggestion';
+
+  //Shop
+  static const String products   = 'Products';
+  static const String  offers  = 'Offers';
+
+  //shop about
+  static const String about    = 'About ';
+  static const String  ourBranches  = 'Our Branches :';
+  static const String availablePaymentMethods   = 'Available Payment methods : ';
+  static const String  reviews   = 'Reviews : ';
+  static const String  summary  = 'Summary : ';
+  static const String  images    = 'Images : ';
+  static const String address    = 'Address :';
+  static const String locationOnMap   = 'Location on map :';
+  static const String  workTimes = 'Work times :';
+  static const String  pressHere = 'Press Here';
+
+  //Branches
+  static const String  branches  = 'Branches';
+
+  //search
+  static const String   distance = 'Distance :  ';
+  static const String  sorting  = 'Sorting';
+  static const String   filter = 'Filter';
+ // static const String    = '';
+ // static const String    = '';
+ // static const String    = '';
+ // static const String    = '';
+ // static const String    = '';
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:marchant/presentation/about/about_app_screen.dart';
 import 'package:marchant/presentation/account/account_screen.dart';
 import 'package:marchant/presentation/account/accountn_iformation_screen.dart';
+import 'package:marchant/presentation/branches/branches_screen.dart';
 import 'package:marchant/presentation/change_password/change_password_screen.dart';
 import 'package:marchant/presentation/ads/ads_screen.dart';
 import 'package:marchant/presentation/auth/forget_password/forget_password_screen.dart';
@@ -17,6 +18,10 @@ import 'package:marchant/presentation/location/location_screen.dart';
 import 'package:marchant/presentation/policy/privacy_policy_screen.dart';
 
 import 'package:marchant/presentation/resources/strings_manager.dart';
+import 'package:marchant/presentation/reviews/reviews_screen.dart';
+import 'package:marchant/presentation/search/search_screen.dart';
+import 'package:marchant/presentation/shop/shop_about_screen.dart';
+import 'package:marchant/presentation/shop/shop_screen.dart';
 
 class Routes {
   static const initialRoute = '/';
@@ -36,6 +41,11 @@ class Routes {
   static const about = '/about';
   static const policy = '/policy';
   static const contactUs = '/contact_us';
+  static const shop = '/shop';
+  static const shopAbout = '/shop_about';
+  static const branches = '/branches';
+  static const reviews = '/reviews';
+  static const search = '/search';
 }
 
 class AppRoutes {
@@ -66,26 +76,33 @@ class AppRoutes {
             builder: (context) => const ChooseLocationScreen());
       case Routes.categories:
         return MaterialPageRoute(
-            builder: (context) =>   const CategoriesScreen());
+            builder: (context) => const CategoriesScreen());
       case Routes.account:
-        return MaterialPageRoute(
-            builder: (context) =>   const AccountScreen());
+        return MaterialPageRoute(builder: (context) => const AccountScreen());
       case Routes.accountInformation:
         return MaterialPageRoute(
-            builder: (context) =>   const AccountInformationScreen());
+            builder: (context) => const AccountInformationScreen());
       case Routes.changePassword:
         return MaterialPageRoute(
-            builder: (context) =>   const ChangePasswordScreen());
+            builder: (context) => const ChangePasswordScreen());
       case Routes.about:
-        return MaterialPageRoute(
-            builder: (context) =>   const AboutAppScreen());
+        return MaterialPageRoute(builder: (context) => const AboutAppScreen());
       case Routes.policy:
         return MaterialPageRoute(
-            builder: (context) =>   const PrivacyPolicyScreen());
+            builder: (context) => const PrivacyPolicyScreen());
       case Routes.contactUs:
-        return MaterialPageRoute(
-            builder: (context) =>    ContactusScreen());
-    // default:
+        return MaterialPageRoute(builder: (context) => ContactusScreen());
+      case Routes.shop:
+        return MaterialPageRoute(builder: (context) => ShopScreen());
+      case Routes.shopAbout:
+        return MaterialPageRoute(builder: (context) => ShopAboutScreen());
+      case Routes.branches:
+        return MaterialPageRoute(builder: (context) => BranchesScreen());
+      case Routes.reviews:
+        return MaterialPageRoute(builder: (context) => ReviewsScreen());
+      case Routes.search:
+        return MaterialPageRoute(builder: (context) => SearchScreen());
+      // default:
       //   return defaultRoute();
     }
   }

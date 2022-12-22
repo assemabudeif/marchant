@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:marchant/models/category_item_model.dart';
 import 'package:marchant/presentation/resources/colors_manager.dart';
 import 'package:marchant/presentation/resources/font_manager.dart';
+import 'package:marchant/presentation/resources/routes_manager.dart';
 import 'package:marchant/presentation/resources/strings_manager.dart';
 import 'package:marchant/presentation/resources/values_manager.dart';
 import 'package:marchant/presentation/widgets/category_common_item_widget.dart';
@@ -109,6 +110,10 @@ class CategoryItemScreenWidget extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) => CategoryCommonListItemWidget(
                     model: model.commonModel[index],
+                    onTap: (){
+                      Navigator.pushNamed(context, Routes.shop);
+
+                    },
                   ),
                   separatorBuilder: (context, index) => const SizedBox(
                     width: AppSize.s14,
@@ -159,6 +164,10 @@ class CategoryItemScreenWidget extends StatelessWidget {
                 physics: const NeverScrollableScrollPhysics(),
                 scrollDirection: Axis.vertical,
                 itemBuilder: (context, index) => CategoryNearestListItemWidget(
+                  onTap: (){
+                    Navigator.pushNamed(context, Routes.shop);
+
+                  },
                   model: model.nearestModel[index],
                 ),
                 separatorBuilder: (context, index) => const SizedBox(

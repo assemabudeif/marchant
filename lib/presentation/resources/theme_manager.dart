@@ -22,7 +22,7 @@ ThemeData getApplicationTheme() {
       elevation: 0,
       systemOverlayStyle: SystemUiOverlayStyle.light,
       iconTheme: IconThemeData(
-        color: ColorManager.accent,
+        color: ColorManager.white,
       )
     ),
 
