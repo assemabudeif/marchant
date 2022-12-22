@@ -123,8 +123,8 @@ class AccountInformationScreen extends StatelessWidget {
                 isRead: true,
                 isObscure: true,
                 onPress: () {
-                  Navigator.pushNamed(
-                      context, Routes.changePassword);                },
+                  Navigator.pushNamed(context, Routes.changePassword);
+                },
                 onTab: () {
                 },
               ),

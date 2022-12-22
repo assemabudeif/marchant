@@ -8,6 +8,7 @@ class DefaultButtonWidget extends StatelessWidget {
   String? text;
   Color? color;
   double? width;
+  double? radius;
   Widget? child;
   DefaultButtonWidget({
     Key? key,
@@ -16,6 +17,7 @@ class DefaultButtonWidget extends StatelessWidget {
     this.color = ColorManager.primary,
     this.width,
     this.child,
+    this.radius,
   }) : super(key: key);
 
   @override
@@ -26,7 +28,7 @@ class DefaultButtonWidget extends StatelessWidget {
       },
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(
-          AppSize.s30,
+          radius ?? AppSize.s30,
         ),
       ),
       padding: EdgeInsets.symmetric(
