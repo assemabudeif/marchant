@@ -40,7 +40,9 @@ class ShopScreen extends StatelessWidget {
               ),
               actions: [
                 IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, Routes.search);
+                    },
                     icon: SvgPicture.asset(
                       ImageAssets.categories,
                       color: ColorManager.grey3,
@@ -66,64 +68,58 @@ class ShopScreen extends StatelessWidget {
                         width: double.infinity,
                         height: AppSize.s156,
                       ),
-                      Stack(
-                        alignment: Alignment.bottomCenter,
-                        children: [
-                          Image.asset(
-                            ImageAssets.shadoImage,
-                            width: double.infinity,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: Row(
-                              children: [
-                                Text(
-                                  'MUSK MARKET',
-                                  style: TextStyle(
-                                    color: ColorManager.white,
-                                    fontWeight: FontWeightManager.medium,
-                                    fontFamily: FontConstants.fontFamily,
-                                    fontSize: AppSize.s20,
-                                  ),
-                                ),
-                                const Spacer(),
-                                IconButton(
-                                  onPressed: () {
-                                    cubit.changeFavorite();
-                                  },
-                                  icon: CircleAvatar(
-                                    radius: AppSize.s25,
-                                    backgroundColor: ColorManager.accent,
-                                    child: Icon(
-                                      cubit.isFavorite
-                                          ? Icons.favorite
-                                          : Icons.favorite_border,
-                                      size: AppSize.s19,
-                                      color: cubit.isFavorite
-                                          ? ColorManager.red
-                                          : Colors.white,
-                                    ),
-                                  ),
-                                ),
-                                IconButton(
-                                  onPressed: () {
-                                    Navigator.pushNamed(
-                                        context, Routes.shopAbout);
-                                  },
-                                  icon: const CircleAvatar(
-                                    radius: AppSize.s25,
-                                    backgroundColor: ColorManager.accent,
-                                    child: Icon(
-                                      Icons.info_outline,
-                                      size: AppSize.s19,
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                ),
-                              ],
+                      Image.asset(
+                        ImageAssets.shadoImage,
+                        width: double.infinity,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Row(
+                          children: [
+                            Text(
+                              'MUSK MARKET',
+                              style: const TextStyle(
+                                color: ColorManager.white,
+                                fontWeight: FontWeightManager.medium,
+                                fontFamily: FontConstants.fontFamily,
+                                fontSize: AppSize.s20,
+                              ),
                             ),
-                          )
-                        ],
+                            const Spacer(),
+                            IconButton(
+                              onPressed: () {
+                                cubit.changeFavorite();
+                              },
+                              icon: CircleAvatar(
+                                radius: AppSize.s25,
+                                backgroundColor: ColorManager.accent,
+                                child: Icon(
+                                  cubit.isFavorite
+                                      ? Icons.favorite
+                                      : Icons.favorite_border,
+                                  size: AppSize.s19,
+                                  color: cubit.isFavorite
+                                      ? ColorManager.red
+                                      : Colors.white,
+                                ),
+                              ),
+                            ),
+                            IconButton(
+                              onPressed: () {
+                                Navigator.pushNamed(context, Routes.shopAbout);
+                              },
+                              icon: const CircleAvatar(
+                                radius: AppSize.s25,
+                                backgroundColor: ColorManager.accent,
+                                child: Icon(
+                                  Icons.info_outline,
+                                  size: AppSize.s19,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
@@ -150,6 +146,7 @@ class ShopScreen extends StatelessWidget {
                       ),
                     ),
                   ),
+
                   //product and offers and search
                   Padding(
                     padding: const EdgeInsets.only(
@@ -159,9 +156,12 @@ class ShopScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         const DriverWidget(),
+
+                        //product and offers
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
+                            //products
                             Expanded(
                               child: InkWell(
                                 onTap: () {
@@ -209,6 +209,7 @@ class ShopScreen extends StatelessWidget {
                               height: AppSize.s34,
                               color: ColorManager.grey2,
                             ),
+                            // offers
                             Expanded(
                               child: InkWell(
                                 onTap: () {
@@ -253,6 +254,8 @@ class ShopScreen extends StatelessWidget {
                             ),
                           ],
                         ),
+
+                        //search
                         ShopSearchBarWidget(
                           onTap: () {
                             Navigator.pushNamed(context, Routes.search);
@@ -261,6 +264,7 @@ class ShopScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+
                   //product items
                   Padding(
                     padding: const EdgeInsets.symmetric(
@@ -271,18 +275,46 @@ class ShopScreen extends StatelessWidget {
                       children: [
                         Row(
                           children: [
-                            ShopItemVerticalWidget(),
-                            ShopItemVerticalWidget(),
+                            ShopItemVerticalWidget(
+                              inCart: false,
+                              isFavorite: false,
+                              name: 'Lasnshon Halwany',
+                              price: '20 EGP / 1 KG',
+                              image: ImageAssets.lanshonOffer,
+                              rate: 4,
+                            ),
+                            ShopItemVerticalWidget(
+                              inCart: true,
+                              isFavorite: true,
+                              name: 'Lasnshon Halwany',
+                              price: '20 EGP / 1 KG',
+                              image: ImageAssets.lanshonOffer,
+                              rate: 4,
+                            ),
                           ],
                         ),
                         const SizedBox(
                           height: AppSize.s10,
                         ),
-                        ShopItemHorizontalWidget(),
+                        ShopItemHorizontalWidget(
+                          inCart: false,
+                          isFavorite: false,
+                          name: 'Lasnshon Halwany',
+                          price: '20 EGP / 1 KG',
+                          image: ImageAssets.lanshonOffer,
+                          rate: 4,
+                        ),
                         const SizedBox(
                           height: AppSize.s10,
                         ),
-                        ShopItemHorizontalWidget(),
+                        ShopItemHorizontalWidget(
+                          inCart: true,
+                          isFavorite: true,
+                          name: 'Lasnshon Halwany',
+                          price: '20 EGP / 1 KG',
+                          image: ImageAssets.lanshonOffer,
+                          rate: 4,
+                        ),
                       ],
                     ),
                   ),

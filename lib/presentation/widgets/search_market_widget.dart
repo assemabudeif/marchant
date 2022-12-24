@@ -29,10 +29,10 @@ class SearchMarketWidget extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(
-            height: 230,
+            height: AppSize.s230,
             width: AppSize.s150,
             child: Card(
-              margin: const EdgeInsets.all(0.0),
+              margin: const EdgeInsets.all(AppSize.none),
               elevation: AppSize.s10,
               shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(
@@ -44,13 +44,13 @@ class SearchMarketWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Container(
-                    height: 121,
+                    height: AppSize.s121,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(AppSize.s25)),
                     clipBehavior: Clip.antiAliasWithSaveLayer,
                     child: Image.asset(
                       image,
-                      height: 121,
+                      height: AppSize.s121,
                       width: AppSize.s150,
                       fit: BoxFit.fill,
                     ),

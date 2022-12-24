@@ -5,8 +5,10 @@ import 'package:marchant/presentation/resources/colors_manager.dart';
 import 'package:marchant/presentation/resources/font_manager.dart';
 import 'package:marchant/presentation/resources/values_manager.dart';
 
+// ignore: must_be_immutable
 class ShopSearchBarWidget extends StatelessWidget {
   Function() onTap;
+
   ShopSearchBarWidget({Key? key, required this.onTap}) : super(key: key);
 
   @override
@@ -22,7 +24,7 @@ class ShopSearchBarWidget extends StatelessWidget {
           children: [
             Text(
               '100 Product',
-              style: TextStyle(
+              style: const TextStyle(
                 color: ColorManager.grey4,
                 fontSize: AppSize.s12,
                 fontWeight: FontWeightManager.bold,
@@ -49,7 +51,7 @@ class ShopSearchBarWidget extends StatelessWidget {
                 )),
             IconButton(
                 onPressed: () {},
-                icon: Icon(
+                icon: const Icon(
                   Icons.format_list_bulleted_outlined,
                   color: ColorManager.grey3,
                 )),

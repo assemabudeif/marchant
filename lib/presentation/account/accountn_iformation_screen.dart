@@ -7,7 +7,6 @@ import 'package:marchant/presentation/resources/strings_manager.dart';
 import 'package:marchant/presentation/resources/values_manager.dart';
 import 'package:marchant/presentation/widgets/default_button_widget.dart';
 import 'package:marchant/presentation/widgets/edit_account_text_field_widget.dart';
-import 'package:marchant/presentation/widgets/login_text_field_widget.dart';
 
 var emailController = TextEditingController();
 var nameController = TextEditingController();
@@ -40,10 +39,12 @@ class AccountInformationScreen extends StatelessWidget {
           physics: const BouncingScrollPhysics(),
           child: Column(
             children: [
+              // profile image
               Center(
                 child: Stack(
                   alignment: Alignment.bottomRight,
                   children: [
+
                     Image(
                       image: AssetImage(
                         ImageAssets.profileImage,
@@ -58,7 +59,7 @@ class AccountInformationScreen extends StatelessWidget {
                         end: 1.0,
                       ),
                       child: CircleAvatar(
-                        radius: 9.0,
+                        radius: AppSize.s9,
                         backgroundColor: ColorManager.accent,
                         child: Icon(
                           Icons.add,
@@ -67,31 +68,14 @@ class AccountInformationScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-/*
-                    Padding(
-                      padding: const EdgeInsetsDirectional.only(
-                        bottom: 10.0,
-                        end: 10.0,
-                      ),
-                      child: IconButton(
-                        onPressed: () {
-                        },
-                        icon: CircleAvatar(
-                          radius: 9.0,
-                          child: Icon(
-                            Icons.add_circle,
-                            color: ColorManager.accent,
-                          ),
-                        ),
-                      ),
-                    ),
-*/
                   ],
                 ),
               ),
               const SizedBox(
                 height: AppPadding.p14,
               ),
+
+              //name
               EditAccountTextFieldWidget(
                 controller: nameController,
                 label: StringsManager.name,
@@ -100,6 +84,8 @@ class AccountInformationScreen extends StatelessWidget {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
+
+              //phone
               EditAccountTextFieldWidget(
                 controller: phoneController,
                 label: StringsManager.phone,
@@ -108,6 +94,8 @@ class AccountInformationScreen extends StatelessWidget {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
+
+              //email
               EditAccountTextFieldWidget(
                 controller: emailController,
                 label: StringsManager.email,
@@ -116,6 +104,8 @@ class AccountInformationScreen extends StatelessWidget {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
+
+              //password
               EditAccountTextFieldWidget(
                 controller: passwordController,
                 label: StringsManager.editPassword,

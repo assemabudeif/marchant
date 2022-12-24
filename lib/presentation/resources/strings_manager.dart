@@ -122,6 +122,9 @@ of the printing and typesetting
   static const String   helpFAQ = 'Help   FAQ';
   static const String   legal = 'Legal … V 31';
   static const String  logOut  = 'Log Out';
+  static const String  language  = 'Language';
+  static const String  payment  = 'Payment';
+  static const String  notifications  = 'Notifications';
 
   //Account Information
   static const String accountInformation = 'Account Information';
@@ -151,6 +154,7 @@ of the printing and typesetting
   //Shop
   static const String products   = 'Products';
   static const String  offers  = 'Offers';
+  static const String  addToCart  = 'Add to Cart';
 
   //shop about
   static const String about    = 'About ';

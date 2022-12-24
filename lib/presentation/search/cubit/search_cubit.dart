@@ -10,15 +10,15 @@ class SearchCubit extends Cubit<SearchState> {
   var searchController = TextEditingController();
   var formKey = GlobalKey<FormState>();
 
-  bool isFilter= false;
+  bool isFilter = false;
   bool isSorting = true;
 
-  void changeButton(String type){
-    if(type == 'filter'){
+  void changeButton(String type) {
+    if (type == 'filter') {
       isFilter = true;
       isSorting = false;
     }
-    if(type == 'sorting'){
+    if (type == 'sorting') {
       isFilter = false;
       isSorting = true;
     }

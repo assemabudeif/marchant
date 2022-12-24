@@ -12,6 +12,7 @@ class AppMargin {
 class AppPadding {
   static const double none = 0.0;
   static const double p8 = 8.0;
+  static const double p9 = 9.0;
   static const double p10 = 10.0;
   static const double p12 = 12.0;
   static const double p14 = 14.0;
@@ -31,9 +32,13 @@ class AppPadding {
 class AppSize {
   static const double none = 0.0;
   static const double s1_5 = 1.5;
+  static const double s3 = 3.0;
   static const double s4 = 4.0;
+  static const double s5 = 5.0;
+  static const double s6 = 6.0;
   static const double s7 = 7.0;
   static const double s8 = 8.0;
+  static const double s9 = 9.0;
   static const double s10 = 10.0;
   static const double s12 = 12.0;
   static const double s13 = 13.0;
@@ -66,17 +71,28 @@ class AppSize {
   static const double s60 = 60.0;
   static const double s65 = 65.0;
   static const double s67 = 67.0;
+  static const double s69 = 69.0;
   static const double s70 = 70.0;
+  static const double s76 = 76.0;
+  static const double s79 = 79.0;
   static const double s80 = 80.0;
+  static const double s82 = 82.0;
   static const double s85 = 85.0;
   static const double s90 = 90.0;
   static const double s92 = 92.0;
   static const double s100 = 100.0;
+  static const double s121 = 121.0;
+  static const double s125 = 125.0;
+  static const double s143 = 143.0;
   static const double s144 = 144.0;
   static const double s147 = 147.0;
   static const double s150 = 150.0;
   static const double s152 = 152.0;
   static const double s155 = 155.0;
   static const double s156 = 156.0;
+  static const double s163 = 163.0;
+  static const double s168 = 168.0;
   static const double s170 = 170.0;
+  static const double s173 = 173.0;
+  static const double s230 = 230.0;
 }

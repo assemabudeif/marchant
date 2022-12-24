@@ -6,18 +6,19 @@ import 'package:marchant/presentation/resources/font_manager.dart';
 import 'package:marchant/presentation/resources/values_manager.dart';
 
 class CategoryNearestListItemWidget extends StatelessWidget {
- final CategoryNearestModel model;
+  final CategoryNearestModel model;
   Function() onTap;
 
-   CategoryNearestListItemWidget({
+  CategoryNearestListItemWidget({
     super.key,
-    required this.model, required this.onTap,
+    required this.model,
+    required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap : onTap ,
+      onTap: onTap,
       child: Row(
         mainAxisSize: MainAxisSize.max,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -25,8 +26,8 @@ class CategoryNearestListItemWidget extends StatelessWidget {
         children: [
           Image.asset(
             model.image,
-            height: 92,
-            width: 125,
+            height: AppSize.s92,
+            width: AppSize.s125,
             fit: BoxFit.fill,
           ),
           const SizedBox(
@@ -96,7 +97,7 @@ class CategoryNearestListItemWidget extends StatelessWidget {
                           width: AppSize.s1_5,
                         ),
                         Text(
-                          model. distance,
+                          model.distance,
                           style: const TextStyle(
                             fontSize: AppSize.s15,
                             fontWeight: FontWeightManager.bold,
