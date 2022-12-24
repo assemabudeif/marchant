@@ -16,6 +16,7 @@ import 'package:marchant/presentation/home/home_layout.dart';
 import 'package:marchant/presentation/location/choose_location_screen.dart';
 import 'package:marchant/presentation/location/location_screen.dart';
 import 'package:marchant/presentation/policy/privacy_policy_screen.dart';
+import 'package:marchant/presentation/product/product_screen.dart';
 
 import 'package:marchant/presentation/resources/strings_manager.dart';
 import 'package:marchant/presentation/reviews/reviews_screen.dart';
@@ -46,6 +47,7 @@ class Routes {
   static const branches = '/branches';
   static const reviews = '/reviews';
   static const search = '/search';
+  static const product = '/product';
 }
 
 class AppRoutes {
@@ -102,6 +104,8 @@ class AppRoutes {
         return MaterialPageRoute(builder: (context) => ReviewsScreen());
       case Routes.search:
         return MaterialPageRoute(builder: (context) => SearchScreen());
+      case Routes.product:
+        return MaterialPageRoute(builder: (context) => ProductScreen());
       // default:
       //   return defaultRoute();
     }

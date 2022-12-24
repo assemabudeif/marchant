@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:marchant/presentation/account/account_screen.dart';
 import 'package:marchant/presentation/home/home_screen.dart';
-import 'package:marchant/presentation/product/product_screen.dart';
 import 'package:marchant/presentation/resources/assets_manager.dart';
 import 'package:marchant/presentation/resources/strings_manager.dart';
 
@@ -66,7 +65,7 @@ class HomeCubit extends Cubit<HomeState> {
       case 2:
         return  Container();
       case 3:
-        return ProductScreen();
+        return Container();
       case 4:
         return const AccountScreen();
     }
