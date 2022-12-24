@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import '../resources/colors_manager.dart';
-import '../resources/font_manager.dart';
-import '../resources/values_manager.dart';
+import 'package:marchant/presentation/resources/colors_manager.dart';
+import 'package:marchant/presentation/resources/font_manager.dart';
+import 'package:marchant/presentation/resources/values_manager.dart';
 
 class CategoryBannerItemWidget extends StatelessWidget {
   final String text;
-  final  Function() onTap;
-  const CategoryBannerItemWidget({super.key, required this.text, required this.onTap});
+  final Function() onTap;
 
+  const CategoryBannerItemWidget(
+      {super.key, required this.text, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -29,8 +30,7 @@ class CategoryBannerItemWidget extends StatelessWidget {
               offset: Offset(1, 1), // Shadow position
             ),
           ],
-          border: Border.all(
-              color: ColorManager.grey3, width: 0.3),
+          border: Border.all(color: ColorManager.grey3, width: 0.3),
           color: ColorManager.primaryLight,
           borderRadius: const BorderRadius.only(
             bottomLeft: Radius.circular(AppSize.s20),
@@ -41,7 +41,7 @@ class CategoryBannerItemWidget extends StatelessWidget {
           child: Text(
             text,
             style: const TextStyle(
-              letterSpacing: 0.0,
+              letterSpacing: AppSize.none,
               fontFamily: FontConstants.fontFamily,
               fontSize: AppSize.s20,
               color: ColorManager.white,

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:marchant/presentation/resources/assets_manager.dart';
 import 'package:marchant/presentation/resources/colors_manager.dart';
 import 'package:marchant/presentation/resources/values_manager.dart';
 
@@ -9,11 +8,18 @@ class ReviewItemWidget extends StatelessWidget {
   final String review;
   final String name;
   final double rate;
-  const ReviewItemWidget({Key? key, required this.image, required this.review, required this.rate, required this.name}) : super(key: key);
+
+  const ReviewItemWidget(
+      {Key? key,
+      required this.image,
+      required this.review,
+      required this.rate,
+      required this.name})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return               Column(
+    return Column(
       mainAxisSize: MainAxisSize.max,
       children: [
         Row(
@@ -22,7 +28,7 @@ class ReviewItemWidget extends StatelessWidget {
               backgroundColor: ColorManager.primaryMoreLight,
               radius: 28,
               child: Image.asset(
-image,
+                image,
                 height: AppSize.s55,
                 width: AppSize.s55,
               ),
@@ -41,8 +47,8 @@ image,
                               .textTheme
                               .titleMedium!
                               .copyWith(
-                              fontSize: AppSize.s17,
-                              color: ColorManager.black)),
+                                  fontSize: AppSize.s17,
+                                  color: ColorManager.black)),
                       const Spacer(),
                       RatingBar.builder(
                         unratedColor: ColorManager.greyDark,

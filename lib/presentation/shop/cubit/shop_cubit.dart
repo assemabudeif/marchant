@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:marchant/models/shop_category_model.dart';
@@ -65,4 +66,16 @@ class ShopCubit extends Cubit<ShopState> {
 
     emit(ChangeFavoriteStata());
   }
+  List<String> images = [
+    for (int i = 0; i < 5; i++) ImageAssets.muskMarket,
+  ];
+
+  int activeIndex = 0;
+  void changeCarouselIndex( int index){
+    activeIndex = index;
+    emit(ChangeCarouselIndexState());
+  }
+  var controller = CarouselController();
+
+
 }

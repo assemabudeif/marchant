@@ -23,7 +23,7 @@ class CategorySearchTextFieldWidget extends StatelessWidget {
         bottom: AppSize.s19,
       ),
       width: double.infinity,
-      height: 70.0,
+      height: AppSize.s70,
       decoration: const BoxDecoration(
         color: ColorManager.primaryLight,
         borderRadius: BorderRadius.only(
@@ -42,7 +42,6 @@ class CategorySearchTextFieldWidget extends StatelessWidget {
         },
         keyboardType: TextInputType.text,
         decoration: InputDecoration(
-          // contentPadding: EdgeInsets.fromLTRB(40, 10, 10, 0),// control your hints text size
           prefixIcon: Padding(
             padding: const EdgeInsets.all(AppSize.s8),
             child: SvgPicture.asset(

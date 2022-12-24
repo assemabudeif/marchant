@@ -9,6 +9,7 @@ import 'package:marchant/presentation/resources/strings_manager.dart';
 import 'package:marchant/presentation/resources/values_manager.dart';
 import 'package:marchant/presentation/widgets/default_button_widget.dart';
 import 'package:marchant/presentation/widgets/login_text_field_widget.dart';
+import 'package:marchant/presentation/widgets/white_app_bar_widget.dart';
 
 class ContactusScreen extends StatelessWidget {
   const ContactusScreen({super.key});
@@ -22,17 +23,9 @@ class ContactusScreen extends StatelessWidget {
           builder: (context, state) {
             var cubit = ContactUsCubit.get(context);
             return Scaffold(
-              appBar: AppBar(
-                backgroundColor: ColorManager.white,
-                centerTitle: true,
-                title: Text(
-                  StringsManager.contactus,
-                  style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                        color: ColorManager.primary,
-                        fontFamily: FontConstants.fontFamily,
-                        // fontWeight:FontWeightManager.bold
-                      ),
-                ),
+              appBar: whiteAppBarWidget(
+                title: StringsManager.contactus,
+                context: context,
               ),
               body: Padding(
                 padding: const EdgeInsets.symmetric(
@@ -44,110 +37,127 @@ class ContactusScreen extends StatelessWidget {
                     key: cubit.formKey,
                     child: Column(
                       children: [
-                        Center(
-                          child: Text(StringsManager.messageType,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .titleSmall!
-                                  .copyWith(
-                                    fontSize: 15,
-                                  )),
-                        ),
-                        const SizedBox(
-                          height: AppSize.s16,
-                        ),
-                        Row(
+                        Column(
                           children: [
-                            Expanded(
-                              child: Row(
-                                children: [
-                                  IconButton(
-                                      onPressed: () {
-                                        cubit.changeRadioButton('suggestion');
-                                      },
-                                      icon: Icon(
-                                        cubit.isSuggestion
-                                            ? Icons.check_circle
-                                            : Icons.circle_outlined,
-                                        size: 30,
-                                        color: cubit.isSuggestion
-                                            ? ColorManager.primary
-                                            : ColorManager.black,
+                            //message type
+                            Center(
+                              child: Text(StringsManager.messageType,
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .titleSmall!
+                                      .copyWith(
+                                        fontSize: AppSize.s15,
                                       )),
-                                  Text(
-                                    StringsManager.suggestion,
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .titleMedium!
-                                        .copyWith(
-                                          fontSize: FontSizeManager.s14,
-                                          fontWeight: FontWeightManager.medium,
-                                        ),
-                                  ),
-                                ],
-                              ),
                             ),
-                            Expanded(
-                              child: Row(
-                                children: [
-                                  IconButton(
-                                      onPressed: () {
-                                        cubit.changeRadioButton('complaint');
-                                      },
-                                      icon: Icon(
-                                        cubit.isComplaint
-                                            ? Icons.check_circle
-                                            : Icons.circle_outlined,
-                                        size: 30,
-                                        color: cubit.isComplaint
-                                            ? ColorManager.primary
-                                            : ColorManager.black,
-                                      )),
-                                  Text(
-                                    StringsManager.complaint,
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .titleMedium!
-                                        .copyWith(
-                                          fontSize: FontSizeManager.s14,
-                                          fontWeight: FontWeightManager.medium,
-                                        ),
+                            const SizedBox(
+                              height: AppSize.s16,
+                            ),
+
+                            //suggestion or complaint
+                            Row(
+                              children: [
+                                //suggestion
+                                Expanded(
+                                  child: Row(
+                                    children: [
+                                      IconButton(
+                                          onPressed: () {
+                                            cubit.changeRadioButton('suggestion');
+                                          },
+                                          icon: Icon(
+                                            cubit.isSuggestion
+                                                ? Icons.check_circle
+                                                : Icons.circle_outlined,
+                                            size: AppSize.s30,
+                                            color: cubit.isSuggestion
+                                                ? ColorManager.primary
+                                                : ColorManager.black,
+                                          )),
+                                      Text(
+                                        StringsManager.suggestion,
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .titleMedium!
+                                            .copyWith(
+                                              fontSize: FontSizeManager.s14,
+                                              fontWeight: FontWeightManager.medium,
+                                            ),
+                                      ),
+                                    ],
                                   ),
-                                ],
-                              ),
+                                ),
+
+                                // complaint
+                                Expanded(
+                                  child: Row(
+                                    children: [
+                                      IconButton(
+                                          onPressed: () {
+                                            cubit.changeRadioButton('complaint');
+                                          },
+                                          icon: Icon(
+                                            cubit.isComplaint
+                                                ? Icons.check_circle
+                                                : Icons.circle_outlined,
+                                            size: AppSize.s30,
+                                            color: cubit.isComplaint
+                                                ? ColorManager.primary
+                                                : ColorManager.black,
+                                          )),
+                                      Text(
+                                        StringsManager.complaint,
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .titleMedium!
+                                            .copyWith(
+                                              fontSize: FontSizeManager.s14,
+                                              fontWeight: FontWeightManager.medium,
+                                            ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: AppSize.s45,
+                            ),
+
+                            //name
+                            LoginTextFieldWidget(
+                              controller: cubit.nameController,
+                              label: StringsManager.name,
+                              keyboardType: TextInputType.name,
+                              labelColor: ColorManager.grey2,
+                            ),
+                            SizedBox(
+                              height: MediaQuery.of(context).size.height * 0.02,
+                            ),
+
+                            //email
+                            LoginTextFieldWidget(
+                              controller: cubit.emailController,
+                              label: StringsManager.email,
+                              keyboardType: TextInputType.emailAddress,
+                              labelColor: ColorManager.grey2,
+                            ),
+                            SizedBox(
+                              height: MediaQuery.of(context).size.height * 0.02,
+                            ),
+
+                            //message
+                            LoginTextFieldWidget(
+                              controller: cubit.messageController,
+                              label: StringsManager.messageContent,
+                              keyboardType: TextInputType.text,
+                              labelColor: ColorManager.grey2,
+                            ),
+                            SizedBox(
+                              height: MediaQuery.of(context).size.height * 0.10,
                             ),
                           ],
                         ),
-                        const SizedBox(
-                          height: AppSize.s45,
-                        ),
-                        LoginTextFieldWidget(
-                          controller: cubit.nameController,
-                          label: StringsManager.name,
-                          keyboardType: TextInputType.name,
-                          labelColor: ColorManager.grey2,
-                        ),
-                        SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.02,
-                        ),
-                        LoginTextFieldWidget(
-                          controller: cubit.emailController,
-                          label: StringsManager.email,
-                          keyboardType: TextInputType.emailAddress,
-                          labelColor: ColorManager.grey2,
-                        ),
-                        SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.02,
-                        ),
-                        LoginTextFieldWidget(
-                          controller: cubit.messageController,
-                          label: StringsManager.messageContent,
-                          keyboardType: TextInputType.text,
-                          labelColor: ColorManager.grey2,
-                        ),
-                        SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.10,
-                        ),
+                        //send
                         Column(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
@@ -177,7 +187,7 @@ class ContactusScreen extends StatelessWidget {
                                                 )),
                                           ),
                                           const SizedBox(
-                                            height: 5.0,
+                                            height: AppSize.s5,
                                           ),
                                           Column(
                                             mainAxisSize: MainAxisSize.min,
@@ -263,7 +273,7 @@ class ContactusScreen extends StatelessWidget {
                                       height: AppSize.s34,
                                       width: AppSize.s34,
                                     )),
-                               const SizedBox(
+                                const SizedBox(
                                   width: AppSize.s25,
                                 ),
                                 IconButton(

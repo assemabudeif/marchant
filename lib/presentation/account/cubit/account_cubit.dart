@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:marchant/presentation/account/cubit/account_state.dart';
-import 'package:marchant/presentation/resources/assets_manager.dart';
-import 'package:marchant/presentation/resources/strings_manager.dart';
 
 class AccountCubit extends Cubit<AccountState> {
   AccountCubit() : super(AccountInitial());
@@ -17,21 +15,18 @@ class AccountCubit extends Cubit<AccountState> {
 
   bool isMyAccount = true;
   bool isSettings = true;
-  bool isalnassya = true;
+  bool isAlnassya = true;
 
-  void changeRadioButton(String type){
-    if(type == 'settings'){
+  void changeRadioButton(String type) {
+    if (type == 'settings') {
       isSettings = !isSettings;
     }
-    if(type == 'account'){
+    if (type == 'account') {
       isMyAccount = !isMyAccount;
     }
-    if(type == '3alnassya'){
-      isalnassya = !isalnassya;
+    if (type == '3alnassya') {
+      isAlnassya = !isAlnassya;
     }
     emit(ChangeBannerButtonStata());
   }
-
-
-
 }

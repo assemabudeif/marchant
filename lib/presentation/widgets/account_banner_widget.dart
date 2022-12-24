@@ -28,7 +28,7 @@ class AccountBannerWidget extends StatelessWidget {
             text,
             style: const TextStyle(
               color: ColorManager.primary,
-              fontSize: 17.0,
+              fontSize: AppSize.s17,
               fontWeight: FontWeight.bold,
             ),
           ),

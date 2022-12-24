@@ -10,6 +10,7 @@ import 'package:marchant/presentation/resources/strings_manager.dart';
 import 'package:marchant/presentation/resources/values_manager.dart';
 import 'package:marchant/presentation/widgets/account_banner_widget.dart';
 import 'package:marchant/presentation/widgets/account_item_widget.dart';
+import 'package:marchant/presentation/widgets/driver_widget.dart';
 
 class AccountScreen extends StatelessWidget {
   const AccountScreen({Key? key}) : super(key: key);
@@ -86,23 +87,7 @@ class AccountScreen extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            const SizedBox(
-                              height: AppSize.s10,
-                            ),
-                            Padding(
-                              padding: const EdgeInsetsDirectional.only(
-                                start: AppPadding.p30,
-                                end: AppPadding.p30,
-                              ),
-                              child: Container(
-                                width: double.infinity,
-                                height: 1.0,
-                                color: ColorManager.grey2,
-                              ),
-                            ),
-                            const SizedBox(
-                              height: AppSize.s8,
-                            ),
+                            DriverWidget(),
                           ],
                         ),
                         //My Account
@@ -119,16 +104,21 @@ class AccountScreen extends StatelessWidget {
                         if (cubit.isMyAccount)
                           Column(
                             children: [
+                              //wish List
                               AccountItemWidget(
                                 text: StringsManager.wishList,
                                 image: ImageAssets.heartIcon,
                                 onTap: () {},
                               ),
+
+                              //my orders
                               AccountItemWidget(
                                 text: StringsManager.myOrders,
                                 image: ImageAssets.myOrderIcon,
                                 onTap: () {},
                               ),
+
+                              //saved Addresses
                               AccountItemWidget(
                                 text: StringsManager.savedAddresses,
                                 image: ImageAssets.addressesIcon,
@@ -151,6 +141,7 @@ class AccountScreen extends StatelessWidget {
                         if (cubit.isSettings)
                           Column(
                             children: [
+                              //Language
                               InkWell(
                                 onTap: () {},
                                 child: Padding(
@@ -168,7 +159,7 @@ class AccountScreen extends StatelessWidget {
                                         width: AppSize.s25,
                                       ),
                                       const Text(
-                                        'Language',
+                                        StringsManager.language,
                                         style: TextStyle(
                                           color: ColorManager.greyDark,
                                           fontSize: 15.0,
@@ -180,7 +171,7 @@ class AccountScreen extends StatelessWidget {
                                         'English',
                                         style: TextStyle(
                                           color: ColorManager.greyDark,
-                                          fontSize: 15.0,
+                                          fontSize: AppSize.s15,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -188,13 +179,17 @@ class AccountScreen extends StatelessWidget {
                                   ),
                                 ),
                               ),
+
+                              //Payment
                               AccountItemWidget(
-                                text: ' Payment',
+                                text: StringsManager.payment,
                                 image: ImageAssets.creditIcon,
                                 onTap: () {},
                               ),
+
+                              //Notifications
                               AccountItemWidget(
-                                text: ' Notifications',
+                                text: StringsManager.notifications,
                                 image: ImageAssets.notificationIcon,
                                 onTap: () {},
                               ),
@@ -221,7 +216,7 @@ class AccountScreen extends StatelessWidget {
                                   cubit.changeRadioButton('3alnassya');
                                 },
                                 icon: Icon(
-                                    cubit.isalnassya
+                                    cubit.isAlnassya
                                         ? Icons.keyboard_arrow_up_outlined
                                         : Icons.keyboard_arrow_down_outlined,
                                     color: ColorManager.accent),
@@ -232,9 +227,10 @@ class AccountScreen extends StatelessWidget {
                         const SizedBox(
                           height: AppSize.s17,
                         ),
-                        if (cubit.isalnassya)
+                        if (cubit.isAlnassya)
                           Column(
                             children: [
+                              //about app
                               AccountItemWidget(
                                 text: StringsManager.aboutApplication,
                                 image: ImageAssets.aboutIcon,
@@ -242,6 +238,8 @@ class AccountScreen extends StatelessWidget {
                                   Navigator.pushNamed(context, Routes.about);
                                 },
                               ),
+
+                              //privacy
                               AccountItemWidget(
                                 text: StringsManager.privacyPolicy,
                                 image: ImageAssets.privacyIcon,
@@ -249,11 +247,15 @@ class AccountScreen extends StatelessWidget {
                                   Navigator.pushNamed(context, Routes.policy);
                                 },
                               ),
+
+                              //terms
                               AccountItemWidget(
                                 text: StringsManager.termsAndConditions,
                                 image: ImageAssets.termsIcon,
                                 onTap: () {},
                               ),
+
+                              //call us
                               AccountItemWidget(
                                 text: StringsManager.callUs,
                                 image: ImageAssets.phoneIcon,
@@ -262,41 +264,57 @@ class AccountScreen extends StatelessWidget {
                                       context, Routes.contactUs);
                                 },
                               ),
+
+                              //facebook
                               AccountItemWidget(
                                 text: StringsManager.facebook,
                                 image: ImageAssets.facebookIcon,
                                 onTap: () {},
                               ),
+
+                              //twitter
                               AccountItemWidget(
                                 text: StringsManager.twitter,
                                 image: ImageAssets.addressesIcon,
                                 onTap: () {},
                               ),
+
+                              //instagram
                               AccountItemWidget(
                                 text: StringsManager.instagram,
                                 image: ImageAssets.instagramIcon,
                                 onTap: () {},
                               ),
+
+                              //share App With Friends
                               AccountItemWidget(
                                 text: StringsManager.shareAppWithFriends,
                                 image: ImageAssets.shareIcon,
                                 onTap: () {},
                               ),
+
+                              //rate Application
                               AccountItemWidget(
                                 text: StringsManager.rateApplication,
                                 image: ImageAssets.starIcon,
                                 onTap: () {},
                               ),
+
+                              //help
                               AccountItemWidget(
                                 text: StringsManager.helpFAQ,
                                 image: ImageAssets.helpIcon,
                                 onTap: () {},
                               ),
+
+                              //legal
                               AccountItemWidget(
                                 text: StringsManager.legal,
                                 image: ImageAssets.legalIcon,
                                 onTap: () {},
                               ),
+
+                              //log out
                               AccountItemWidget(
                                 text: StringsManager.logOut,
                                 image: ImageAssets.logoutIcon,
@@ -309,7 +327,7 @@ class AccountScreen extends StatelessWidget {
                           'جميع الحقوق محفوظة لشركة اون كوميرس',
                           style: TextStyle(
                             color: ColorManager.greyDark,
-                            fontSize: 15.0,
+                            fontSize: AppSize.s15,
                             fontWeight: FontWeightManager.bold,
                             fontFamily: FontConstants.fontFamily,
                           ),

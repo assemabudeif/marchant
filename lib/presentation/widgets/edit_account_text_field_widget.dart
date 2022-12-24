@@ -30,19 +30,20 @@ class EditAccountTextFieldWidget extends StatefulWidget {
   bool? isRead;
 
   @override
-  State<EditAccountTextFieldWidget> createState() => _EditAccountTextFieldWidgetState();
+  State<EditAccountTextFieldWidget> createState() =>
+      _EditAccountTextFieldWidgetState();
 }
 
-class _EditAccountTextFieldWidgetState extends State<EditAccountTextFieldWidget> {
+class _EditAccountTextFieldWidgetState
+    extends State<EditAccountTextFieldWidget> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       controller: widget.controller,
       style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-        color: ColorManager.black,
-        //fontWeight: FontWeightManager.light,
-        fontSize: AppSize.s15,
-      ),
+            color: ColorManager.black,
+            fontSize: AppSize.s15,
+          ),
       cursorColor: ColorManager.primary,
       validator: (value) {
         if (value!.isEmpty) {
@@ -52,36 +53,35 @@ class _EditAccountTextFieldWidgetState extends State<EditAccountTextFieldWidget>
       },
       readOnly: widget.isRead!,
       decoration: InputDecoration(
-        labelText: widget.label,
-        labelStyle: Theme.of(context).textTheme.bodyLarge!.copyWith(
-          color: widget.labelColor,
-          fontWeight: FontWeightManager.bold,
-          fontFamily: FontConstants.fontFamily,
-          fontSize: AppSize.s15,
-        ),
-        enabledBorder: const UnderlineInputBorder(
-          borderSide: BorderSide(
-            color: ColorManager.grey2,
+          labelText: widget.label,
+          labelStyle: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                color: widget.labelColor,
+                fontWeight: FontWeightManager.bold,
+                fontFamily: FontConstants.fontFamily,
+                fontSize: AppSize.s15,
+              ),
+          enabledBorder: const UnderlineInputBorder(
+            borderSide: BorderSide(
+              color: ColorManager.grey2,
+            ),
           ),
-        ),
-        focusedBorder: const UnderlineInputBorder(
-          borderSide: BorderSide(
-            color: ColorManager.primary,
+          focusedBorder: const UnderlineInputBorder(
+            borderSide: BorderSide(
+              color: ColorManager.primary,
+            ),
           ),
-        ),
-        suffixIcon: IconButton(
-          onPressed:
-              () {
-            if (widget.onPress != null) {
-              widget.onPress!();
-            }
-          },
-          icon: Image.asset(ImageAssets.editIcon,
-          height: AppSize.s18,
-          width: AppSize.s18,
-        ),
-        )
-      ),
+          suffixIcon: IconButton(
+            onPressed: () {
+              if (widget.onPress != null) {
+                widget.onPress!();
+              }
+            },
+            icon: Image.asset(
+              ImageAssets.editIcon,
+              height: AppSize.s18,
+              width: AppSize.s18,
+            ),
+          )),
       keyboardType: widget.keyboardType,
       obscureText: widget.isObscure!,
       obscuringCharacter: '-',
@@ -90,7 +90,6 @@ class _EditAccountTextFieldWidgetState extends State<EditAccountTextFieldWidget>
           widget.onTab!();
         }
       },
-
     );
   }
 }

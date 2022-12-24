@@ -7,24 +7,24 @@ import 'package:marchant/presentation/resources/values_manager.dart';
 
 class CategoryCommonListItemWidget extends StatelessWidget {
   final CategoryCommonModel model;
-   Function() onTap;
+  Function() onTap;
 
-   CategoryCommonListItemWidget({super.key, required this.model, required this.onTap});
-
+  CategoryCommonListItemWidget(
+      {super.key, required this.model, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
-    return  InkWell(
+    return InkWell(
       onTap: onTap,
       child: SizedBox(
-        height: 152,
+        height: AppSize.s152,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.asset(
-             model.image,
-              width: 173,
-              height: 76,
+              model.image,
+              width: AppSize.s173,
+              height: AppSize.s76,
             ),
             Padding(
               padding: const EdgeInsets.all(AppPadding.p8),
@@ -32,7 +32,7 @@ class CategoryCommonListItemWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                   model.name,
+                    model.name,
                     style: Theme.of(context).textTheme.titleSmall,
                   ),
                   Row(

@@ -7,14 +7,14 @@ import 'package:marchant/presentation/resources/values_manager.dart';
 class ShopCategoryItemWidget extends StatelessWidget {
   final String image;
   final String text;
-  bool isTaped ;
+  bool isTaped;
 
-
-  ShopCategoryItemWidget(
-      {super.key,
-      required this.image,
-      required this.text, required this.isTaped,
-      });
+  ShopCategoryItemWidget({
+    super.key,
+    required this.image,
+    required this.text,
+    required this.isTaped,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -28,11 +28,11 @@ class ShopCategoryItemWidget extends StatelessWidget {
             alignment: Alignment.center,
             children: [
               Image.asset(
-                 isTaped? ImageAssets.squareIcon : ImageAssets.whiteSquare,
+                isTaped ? ImageAssets.squareIcon : ImageAssets.whiteSquare,
               ),
-              Image.asset(image,
-                color: isTaped? ColorManager.white : ColorManager.grey4 ,
-
+              Image.asset(
+                image,
+                color: isTaped ? ColorManager.white : ColorManager.grey4,
               ),
             ],
           ),
@@ -42,7 +42,7 @@ class ShopCategoryItemWidget extends StatelessWidget {
           Text(
             text,
             style: TextStyle(
-              color: isTaped? ColorManager.accent : ColorManager.grey4 ,
+              color: isTaped ? ColorManager.accent : ColorManager.grey4,
               fontSize: AppSize.s14,
               fontWeight: FontWeightManager.bold,
               fontFamily: FontConstants.fontFamily,

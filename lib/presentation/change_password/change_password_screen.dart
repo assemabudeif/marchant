@@ -26,57 +26,68 @@ class ChangePasswordScreen extends StatelessWidget {
               isBackButtonVisible: true,
             ),
             SliverList(
-                delegate: SliverChildListDelegate([
-              Padding(
-                padding: const EdgeInsets.all(AppPadding.p31),
-                child: Form(
-                  key: formKey,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        StringsManager.editPassword,
-                        style:
-                        Theme.of(context).textTheme.titleSmall!.copyWith(
-                          color: ColorManager.primary,
-                        ),
+              delegate: SliverChildListDelegate(
+                [
+                  Padding(
+                    padding: const EdgeInsets.all(AppPadding.p31),
+                    child: Form(
+                      key: formKey,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            StringsManager.editPassword,
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleSmall!
+                                .copyWith(
+                                  color: ColorManager.primary,
+                                ),
+                          ),
+                          const SizedBox(height: AppSize.s18),
+
+                          //old password
+                          LoginTextFieldWidget(
+                            controller: oldPasswordController,
+                            label: StringsManager.enterOldPassword,
+                            keyboardType: TextInputType.visiblePassword,
+                            labelColor: ColorManager.grey4,
+                            isPassword: true,
+                            isObscure: true,
+                          ),
+                          SizedBox(
+                            height: MediaQuery.of(context).size.height * 0.02,
+                          ),
+
+                          //new password
+                          LoginTextFieldWidget(
+                            controller: newPasswordController,
+                            label: StringsManager.enterNewPassword,
+                            keyboardType: TextInputType.visiblePassword,
+                            labelColor: ColorManager.grey4,
+                            isObscure: true,
+                            isPassword: true,
+                          ),
+                          SizedBox(
+                            height: MediaQuery.of(context).size.height * 0.02,
+                          ),
+
+                          //confirm new password
+                          LoginTextFieldWidget(
+                            controller: confirmPasswordController,
+                            label: StringsManager.confirmNewPassword,
+                            keyboardType: TextInputType.visiblePassword,
+                            labelColor: ColorManager.grey4,
+                            isObscure: true,
+                            isPassword: true,
+                          ),
+                        ],
                       ),
-                      const SizedBox(height: AppSize.s18),
-                      LoginTextFieldWidget(
-                        controller: oldPasswordController,
-                        label: StringsManager.enterOldPassword,
-                        keyboardType: TextInputType.visiblePassword,
-                        labelColor: ColorManager.grey4,
-                        isPassword: true,
-                        isObscure: true,
-                      ),
-                      SizedBox(
-                        height: MediaQuery.of(context).size.height * 0.02,
-                      ),
-                      LoginTextFieldWidget(
-                        controller: newPasswordController,
-                        label: StringsManager.enterNewPassword,
-                        keyboardType: TextInputType.visiblePassword,
-                        labelColor: ColorManager.grey4,
-                        isObscure: true,
-                        isPassword: true,
-                      ),
-                      SizedBox(
-                        height: MediaQuery.of(context).size.height * 0.02,
-                      ),
-                      LoginTextFieldWidget(
-                        controller: confirmPasswordController,
-                        label: StringsManager.confirmNewPassword,
-                        keyboardType: TextInputType.visiblePassword,
-                        labelColor: ColorManager.grey4,
-                        isObscure: true,
-                        isPassword: true,
-                      ),
-                    ],
+                    ),
                   ),
-                ),
+                ],
               ),
-            ])),
+            ),
           ],
         ),
       ),

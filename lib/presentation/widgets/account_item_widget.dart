@@ -34,7 +34,7 @@ class AccountItemWidget extends StatelessWidget {
               text,
               style: const TextStyle(
                 color: ColorManager.greyDark,
-                fontSize: 15.0,
+                fontSize: AppSize.s15,
                 fontWeight: FontWeight.bold,
               ),
             ),

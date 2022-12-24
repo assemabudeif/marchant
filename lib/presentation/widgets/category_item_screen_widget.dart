@@ -26,7 +26,7 @@ class CategoryItemScreenWidget extends StatelessWidget {
         title: Text(
           model.appBarTitle,
           style: const TextStyle(
-            letterSpacing: 0.0,
+            letterSpacing: AppSize.none,
             fontFamily: FontConstants.fontFamily,
             fontSize: AppSize.s20,
             color: ColorManager.white,
@@ -55,7 +55,6 @@ class CategoryItemScreenWidget extends StatelessWidget {
                     model.categoriesImages[index],
                     width: AppSize.s92,
                     height: AppSize.s92,
-                    // fit: BoxFit.fill,
                   ),
                   separatorBuilder: (context, index) => const SizedBox(
                     width: AppSize.s12,
@@ -105,14 +104,13 @@ class CategoryItemScreenWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: AppPadding.p12),
               child: SizedBox(
-                height: 152,
+                height: AppSize.s152,
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) => CategoryCommonListItemWidget(
                     model: model.commonModel[index],
-                    onTap: (){
+                    onTap: () {
                       Navigator.pushNamed(context, Routes.shop);
-
                     },
                   ),
                   separatorBuilder: (context, index) => const SizedBox(
@@ -164,9 +162,8 @@ class CategoryItemScreenWidget extends StatelessWidget {
                 physics: const NeverScrollableScrollPhysics(),
                 scrollDirection: Axis.vertical,
                 itemBuilder: (context, index) => CategoryNearestListItemWidget(
-                  onTap: (){
+                  onTap: () {
                     Navigator.pushNamed(context, Routes.shop);
-
                   },
                   model: model.nearestModel[index],
                 ),
