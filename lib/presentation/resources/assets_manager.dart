@@ -80,7 +80,7 @@ class ImageAssets {
   static const String shopRectangleImag = '$imagePath/shop_rectangle_imag.png';
   static const String reviewUserImg = '$imagePath/review_user_img.png';
   static const String freshMarket = '$imagePath/fresh_market.png';
-  // static const String Icon = '$imagePath/_icon.png';
+  static const String addToBasketIcon = '$imagePath/add_to_basket_icon.png';
   // static const String Icon = '$imagePath/_icon.png';
   // static const String Icon = '$imagePath/_icon.png';
 }

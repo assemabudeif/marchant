@@ -175,6 +175,14 @@ of the printing and typesetting
   static const String   distance = 'Distance :  ';
   static const String  sorting  = 'Sorting';
   static const String   filter = 'Filter';
+
+  //Product
+  static const String  product  = 'Product';
+  static const String  description  = 'Description :';
+  static const String  brand  = 'Brand :';
+  static const String  price  = 'Price :';
+  static const String  similarProducts  = 'Similar Products';
+ // static const String    = '';
  // static const String    = '';
  // static const String    = '';
  // static const String    = '';
