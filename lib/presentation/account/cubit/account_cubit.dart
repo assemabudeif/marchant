@@ -27,6 +27,6 @@ class AccountCubit extends Cubit<AccountState> {
     if (type == '3alnassya') {
       isAlnassya = !isAlnassya;
     }
-    emit(ChangeBannerButtonStata());
+    emit(ChangeBannerButtonState());
   }
 }

@@ -23,6 +23,7 @@ import 'package:marchant/presentation/reviews/reviews_screen.dart';
 import 'package:marchant/presentation/search/search_screen.dart';
 import 'package:marchant/presentation/shop/shop_about_screen.dart';
 import 'package:marchant/presentation/shop/shop_screen.dart';
+import 'package:marchant/presentation/wish_list/wish_list_screen.dart';
 
 class Routes {
   static const initialRoute = '/';
@@ -48,6 +49,7 @@ class Routes {
   static const reviews = '/reviews';
   static const search = '/search';
   static const product = '/product';
+  static const wishList = '/wish-list';
 }
 
 class AppRoutes {
@@ -106,6 +108,8 @@ class AppRoutes {
         return MaterialPageRoute(builder: (context) => SearchScreen());
       case Routes.product:
         return MaterialPageRoute(builder: (context) => ProductScreen());
+      case Routes.wishList:
+        return MaterialPageRoute(builder: (context) => WishListScreen());
       // default:
       //   return defaultRoute();
     }

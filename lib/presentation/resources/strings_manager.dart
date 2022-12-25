@@ -182,7 +182,11 @@ of the printing and typesetting
   static const String  brand  = 'Brand :';
   static const String  price  = 'Price :';
   static const String  similarProducts  = 'Similar Products';
- // static const String    = '';
+
+// wish list
+ static const String  shops  = 'Shops';
+
+
  // static const String    = '';
  // static const String    = '';
  // static const String    = '';

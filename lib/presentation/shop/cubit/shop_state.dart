@@ -2,6 +2,8 @@ abstract class ShopState {}
 
 class ShopInitial extends ShopState {}
 
-class ChangeButtonStata extends ShopState {}
-class ChangeFavoriteStata extends ShopState {}
+class ChangeButtonState extends ShopState {}
+
+class ChangeFavoriteState extends ShopState {}
+
 class ChangeCarouselIndexState extends ShopState {}

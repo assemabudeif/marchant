@@ -108,7 +108,10 @@ class AccountScreen extends StatelessWidget {
                               AccountItemWidget(
                                 text: StringsManager.wishList,
                                 image: ImageAssets.heartIcon,
-                                onTap: () {},
+                                onTap: () {
+                                  Navigator.pushNamed(context, Routes.wishList);
+
+                                },
                               ),
 
                               //my orders
