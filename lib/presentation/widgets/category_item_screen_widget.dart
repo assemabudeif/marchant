@@ -36,7 +36,6 @@ class CategoryItemScreenWidget extends StatelessWidget {
         centerTitle: true,
       ),
       body: SingleChildScrollView(
-        physics: const BouncingScrollPhysics(),
         child: Column(
           children: [
             CategorySearchTextFieldWidget(searchController: searchController),

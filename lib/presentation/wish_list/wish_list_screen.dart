@@ -175,6 +175,16 @@ class WishListScreen extends StatelessWidget {
                 ],
               ),
             ),
+            floatingActionButton: FloatingActionButton(
+              backgroundColor: ColorManager.primaryLight,
+              onPressed: () {},
+              child: const Icon(
+                Icons.filter_alt_rounded,
+                size: AppSize.s32,
+              ),
+            ),
+            floatingActionButtonLocation:
+                FloatingActionButtonLocation.startFloat,
           );
         },
       ),

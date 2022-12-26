@@ -110,7 +110,6 @@ class AccountScreen extends StatelessWidget {
                                 image: ImageAssets.heartIcon,
                                 onTap: () {
                                   Navigator.pushNamed(context, Routes.wishList);
-
                                 },
                               ),
 
@@ -118,7 +117,9 @@ class AccountScreen extends StatelessWidget {
                               AccountItemWidget(
                                 text: StringsManager.myOrders,
                                 image: ImageAssets.myOrderIcon,
-                                onTap: () {},
+                                onTap: () {
+                                  Navigator.pushNamed(context, Routes.myOrders);
+                                },
                               ),
 
                               //saved Addresses
