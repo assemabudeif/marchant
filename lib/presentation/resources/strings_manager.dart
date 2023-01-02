@@ -180,8 +180,8 @@ of the printing and typesetting
   //Product
   static const String product = 'Product';
   static const String description = 'Description :';
-  static const String brand = 'Brand :';
-  static const String price = 'Price :';
+  static const String brand = 'Brand : ';
+  static const String price = 'Price : ';
   static const String similarProducts = 'Similar Products';
 
 // wish list
@@ -204,11 +204,31 @@ of the printing and typesetting
   static const String paymentMethod = 'Payment Method';
   static const String yourOrder = 'Your Order';
   static const String buyer = 'Buyer';
-  static const String  deliverTo  = 'Deliver To';
-  static const String  landMark  = 'Land Mark : ';
+  static const String deliverTo = 'Deliver To';
+  static const String landMark = 'Land Mark : ';
 
+  //saved addresses
+  static const String totalPrice = 'Total Price : ';
+  static const String Continue = 'continue';
+  static const String notes = 'Notes';
 
-// static const String    = '';
+// order summary
+  static const String orderSummery = 'Order Summery';
+  static const String yourOrderPrice = 'Your order  Price : ';
+  static const String specifyDeliveryAddress = 'Specify delivery address';
+  static const String specifyDeliveryAddressToKnowDeliveryFees = 'Specify delivery address to know delivery fees';
+  static const String discountCoupon = 'Discount coupon';
+  static const String enterDiscountCouponCode = 'Enter discount coupon code';
+  static const String cash = 'Cash';
+  static const String visaFromHome = 'Visa From Home';
+  static const String creditCard = 'Credit Card';
+
+//order done
+  static const String yourOrderSendSuccessfully = 'Your Order Send Successfully';
+  static const String   thankYou = 'Thank You';
+  static const String  nextOrder  = 'Next Order';
+  static const String  continueShopping  = 'Continue Shopping';
+  static const String  orderNo  = 'Order No : ';
 // static const String    = '';
 // static const String    = '';
 }

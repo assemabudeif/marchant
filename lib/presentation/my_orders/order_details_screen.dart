@@ -112,7 +112,7 @@ class OrderDetailsScreen extends StatelessWidget {
                       SizedBox(
                         height: MediaQuery.of(context).size.height * 0.02,
                       ),
-                      const DriverWidget(),
+                       DriverWidget(),
 
                       // money
                       Column(
@@ -212,7 +212,7 @@ class OrderDetailsScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      const DriverWidget(),
+                       DriverWidget(),
 
                       //address
                       Row(
@@ -301,7 +301,7 @@ Floor 6 - department 12''',
                           ),
                         ],
                       ),
-                      const DriverWidget(),
+                       DriverWidget(),
 
                       //order
                       Column(
@@ -333,13 +333,13 @@ Floor 6 - department 12''',
                                   'Some description will be here bla bla bla bla bla bla',
                             ),
                             separatorBuilder: (context, index) =>
-                                const DriverWidget(),
+                                 DriverWidget(),
                             itemCount: 2,
                           ),
                         ],
                       ),
 
-                      const DriverWidget(),
+                       DriverWidget(),
 
                       //buyer
                       Column(

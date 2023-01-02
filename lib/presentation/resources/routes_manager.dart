@@ -3,6 +3,7 @@ import 'package:marchant/presentation/about/about_app_screen.dart';
 import 'package:marchant/presentation/account/account_screen.dart';
 import 'package:marchant/presentation/account/accountn_iformation_screen.dart';
 import 'package:marchant/presentation/branches/branches_screen.dart';
+import 'package:marchant/presentation/cart/cart_screen.dart';
 import 'package:marchant/presentation/change_password/change_password_screen.dart';
 import 'package:marchant/presentation/ads/ads_screen.dart';
 import 'package:marchant/presentation/auth/forget_password/forget_password_screen.dart';
@@ -51,7 +52,8 @@ class Routes {
   static const search = '/search';
   static const product = '/product';
   static const wishList = '/wish_list';
-  static const myOrders = '/my_ordrs';
+  static const myOrders = '/my_orders';
+  static const cart = '/cart';
 }
 
 class AppRoutes {
@@ -114,6 +116,8 @@ class AppRoutes {
         return MaterialPageRoute(builder: (context) => WishListScreen());
       case Routes.myOrders:
         return MaterialPageRoute(builder: (context) => MyOrdersScreen());
+      case Routes.cart:
+        return MaterialPageRoute(builder: (context) => CartScreen());
       // default:
       //   return defaultRoute();
     }

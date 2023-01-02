@@ -81,6 +81,10 @@ class ImageAssets {
   static const String reviewUserImg = '$imagePath/review_user_img.png';
   static const String freshMarket = '$imagePath/fresh_market.png';
   static const String addToBasketIcon = '$imagePath/add_to_basket_icon.png';
-  // static const String Icon = '$imagePath/_icon.png';
-  // static const String Icon = '$imagePath/_icon.png';
+  static const String creditCardCartIcon = '$imagePath/credit_card_cart_icon.png';
+  static const String discountCouponIcon = '$imagePath/discount_coupon_icon.png';
+  static const String dollarIcon = '$imagePath/dollar_icon.png';
+  static const String visaIcon = '$imagePath/visa_icon.png';
+// static const String Icon = '$imagePath/_icon.png';
+// static const String Icon = '$imagePath/_icon.png';
 }

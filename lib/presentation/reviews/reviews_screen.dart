@@ -86,7 +86,7 @@ class ReviewsScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              const DriverWidget(),
+              DriverWidget(),
               ListView.separated(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
@@ -98,7 +98,7 @@ class ReviewsScreen extends StatelessWidget {
                   name: 'Ahmed Ali',
                   image: ImageAssets.reviewUserImg,
                 ),
-                separatorBuilder: (context, index) => const DriverWidget(),
+                separatorBuilder: (context, index) =>  DriverWidget(),
                 itemCount: 15,
               ),
               // ReviewItemWidget

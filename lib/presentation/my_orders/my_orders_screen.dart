@@ -12,14 +12,9 @@ import 'package:marchant/presentation/widgets/white_app_bar_widget.dart';
 
 import '../resources/values_manager.dart';
 
-class MyOrdersScreen extends StatefulWidget {
+class MyOrdersScreen extends StatelessWidget {
   const MyOrdersScreen({Key? key}) : super(key: key);
 
-  @override
-  State<MyOrdersScreen> createState() => _MyOrdersScreenState();
-}
-
-class _MyOrdersScreenState extends State<MyOrdersScreen> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
