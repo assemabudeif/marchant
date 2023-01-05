@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:marchant/models/shop_category_model.dart';
 import 'package:marchant/presentation/resources/assets_manager.dart';
-import 'package:marchant/presentation/resources/strings_manager.dart';
 import 'package:marchant/presentation/shop/cubit/shop_state.dart';
 
 class ShopCubit extends Cubit<ShopState> {
@@ -58,13 +57,13 @@ class ShopCubit extends Cubit<ShopState> {
       isOffers = true;
     }
 
-    emit(ChangeButtonStata());
+    emit(ChangeButtonState());
   }
   void changeFavorite(){
     isFavorite = !isFavorite;
 
 
-    emit(ChangeFavoriteStata());
+    emit(ChangeFavoriteState());
   }
   List<String> images = [
     for (int i = 0; i < 5; i++) ImageAssets.muskMarket,

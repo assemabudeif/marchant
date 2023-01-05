@@ -108,14 +108,18 @@ class AccountScreen extends StatelessWidget {
                               AccountItemWidget(
                                 text: StringsManager.wishList,
                                 image: ImageAssets.heartIcon,
-                                onTap: () {},
+                                onTap: () {
+                                  Navigator.pushNamed(context, Routes.wishList);
+                                },
                               ),
 
                               //my orders
                               AccountItemWidget(
                                 text: StringsManager.myOrders,
                                 image: ImageAssets.myOrderIcon,
-                                onTap: () {},
+                                onTap: () {
+                                  Navigator.pushNamed(context, Routes.myOrders);
+                                },
                               ),
 
                               //saved Addresses

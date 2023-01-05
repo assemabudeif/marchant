@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:marchant/presentation/account/account_screen.dart';
+import 'package:marchant/presentation/cart/cart_screen.dart';
 import 'package:marchant/presentation/home/home_screen.dart';
 import 'package:marchant/presentation/resources/assets_manager.dart';
 import 'package:marchant/presentation/resources/strings_manager.dart';
@@ -34,7 +35,9 @@ class HomeCubit extends Cubit<HomeState> {
       index: 2,
       text: StringsManager.cart,
       icon: ImageAssets.cart,
-      onPressed: () {},
+      onPressed: () {
+
+      },
     ),
     Items(
       index: 3,
@@ -72,9 +75,17 @@ class HomeCubit extends Cubit<HomeState> {
     return null;
   }
 
-  void changePageIndex(int index) {
+  void changePageIndex(int index, context) {
     emit(HomeInitial());
-    currentIndex = index;
+    if(index == 2){
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => CartScreen()
+        ),
+      );
+    }else{
+    currentIndex = index;}
     emit(ChangePageIndexState());
   }
 }

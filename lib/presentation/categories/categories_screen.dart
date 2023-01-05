@@ -32,7 +32,6 @@ class CategoriesScreen extends StatelessWidget {
           return Scaffold(
             body: SafeArea(
               child: SingleChildScrollView(
-                physics: const BouncingScrollPhysics(),
                 child: Column(
                   children: [
                     Container(

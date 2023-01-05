@@ -89,7 +89,7 @@ class ShopAboutScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const DriverWidget(),
+                    DriverWidget(),
                     // Available Payment methods
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -184,7 +184,7 @@ class ShopAboutScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const DriverWidget(),
+                    DriverWidget(),
                     //reviews
                     InkWell(
                       onTap: () {
@@ -255,7 +255,7 @@ class ShopAboutScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-                    const DriverWidget(),
+                    DriverWidget(),
                     //summary
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -282,7 +282,7 @@ class ShopAboutScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const DriverWidget(),
+                    DriverWidget(),
                     //images
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -362,7 +362,7 @@ class ShopAboutScreen extends StatelessWidget {
                         )
                       ],
                     ),
-                    const DriverWidget(),
+                    DriverWidget(),
                     //address
                     Row(
                       children: [
@@ -399,7 +399,7 @@ class ShopAboutScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const DriverWidget(),
+                    DriverWidget(),
                     //Location on map
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -455,7 +455,7 @@ class ShopAboutScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const DriverWidget(),
+                    DriverWidget(),
                     //work time
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,

@@ -5,8 +5,9 @@ whiteAppBarWidget ({
   required BuildContext context,
   required String title,
   List<Widget>? actions,
+  Color? color,
 }) => AppBar(
-      backgroundColor: ColorManager.white,
+      backgroundColor: color??ColorManager.white,
       title: Text(
         title,
         style: Theme.of(context).textTheme.titleSmall!.copyWith(

@@ -3,6 +3,7 @@ import 'package:marchant/presentation/about/about_app_screen.dart';
 import 'package:marchant/presentation/account/account_screen.dart';
 import 'package:marchant/presentation/account/accountn_iformation_screen.dart';
 import 'package:marchant/presentation/branches/branches_screen.dart';
+import 'package:marchant/presentation/cart/cart_screen.dart';
 import 'package:marchant/presentation/change_password/change_password_screen.dart';
 import 'package:marchant/presentation/ads/ads_screen.dart';
 import 'package:marchant/presentation/auth/forget_password/forget_password_screen.dart';
@@ -15,6 +16,7 @@ import 'package:marchant/presentation/guide/guide_screen.dart';
 import 'package:marchant/presentation/home/home_layout.dart';
 import 'package:marchant/presentation/location/choose_location_screen.dart';
 import 'package:marchant/presentation/location/location_screen.dart';
+import 'package:marchant/presentation/my_orders/my_orders_screen.dart';
 import 'package:marchant/presentation/policy/privacy_policy_screen.dart';
 import 'package:marchant/presentation/product/product_screen.dart';
 
@@ -23,6 +25,7 @@ import 'package:marchant/presentation/reviews/reviews_screen.dart';
 import 'package:marchant/presentation/search/search_screen.dart';
 import 'package:marchant/presentation/shop/shop_about_screen.dart';
 import 'package:marchant/presentation/shop/shop_screen.dart';
+import 'package:marchant/presentation/wish_list/wish_list_screen.dart';
 
 class Routes {
   static const initialRoute = '/';
@@ -48,6 +51,9 @@ class Routes {
   static const reviews = '/reviews';
   static const search = '/search';
   static const product = '/product';
+  static const wishList = '/wish_list';
+  static const myOrders = '/my_orders';
+  static const cart = '/cart';
 }
 
 class AppRoutes {
@@ -106,6 +112,12 @@ class AppRoutes {
         return MaterialPageRoute(builder: (context) => SearchScreen());
       case Routes.product:
         return MaterialPageRoute(builder: (context) => ProductScreen());
+      case Routes.wishList:
+        return MaterialPageRoute(builder: (context) => WishListScreen());
+      case Routes.myOrders:
+        return MaterialPageRoute(builder: (context) => MyOrdersScreen());
+      case Routes.cart:
+        return MaterialPageRoute(builder: (context) => CartScreen());
       // default:
       //   return defaultRoute();
     }

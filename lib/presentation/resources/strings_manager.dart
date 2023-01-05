@@ -105,26 +105,26 @@ of the printing and typesetting
   static const String nearestMarkets = 'Nearest Markets';
 
   //Account
-  static const String  myAccount  = 'My Account';
-  static const String wishList   = 'Wish List';
-  static const String  myOrders  = 'My Orders';
-  static const String  savedAddresses  = 'Saved Addresses';
-  static const String  settings  = 'Settings';
-  static const String aboutApplication   = 'About Application';
-  static const String privacyPolicy   = 'Privacy policy';
-  static const String termsAndConditions   = 'Terms and conditions';
-  static const String  callUs  = 'Call Us';
-  static const String  facebook  = 'Facebook';
-  static const String  twitter  = 'Twitter';
-  static const String instagram   = 'Instagram';
-  static const String  shareAppWithFriends  = 'Share App With Friends';
-  static const String  rateApplication  = 'Rate Application';
-  static const String   helpFAQ = 'Help   FAQ';
-  static const String   legal = 'Legal … V 31';
-  static const String  logOut  = 'Log Out';
-  static const String  language  = 'Language';
-  static const String  payment  = 'Payment';
-  static const String  notifications  = 'Notifications';
+  static const String myAccount = 'My Account';
+  static const String wishList = 'Wish List';
+  static const String myOrders = 'My Orders';
+  static const String savedAddresses = 'Saved Addresses';
+  static const String settings = 'Settings';
+  static const String aboutApplication = 'About Application';
+  static const String privacyPolicy = 'Privacy policy';
+  static const String termsAndConditions = 'Terms and conditions';
+  static const String callUs = 'Call Us';
+  static const String facebook = 'Facebook';
+  static const String twitter = 'Twitter';
+  static const String instagram = 'Instagram';
+  static const String shareAppWithFriends = 'Share App With Friends';
+  static const String rateApplication = 'Rate Application';
+  static const String helpFAQ = 'Help   FAQ';
+  static const String legal = 'Legal … V 31';
+  static const String logOut = 'Log Out';
+  static const String language = 'Language';
+  static const String payment = 'Payment';
+  static const String notifications = 'Notifications';
 
   //Account Information
   static const String accountInformation = 'Account Information';
@@ -139,53 +139,96 @@ of the printing and typesetting
   static const String confirmNewPassword = 'Confirm New Password';
   static const String save = 'Save';
 
-  static const String  aboutUs  = 'About us';
+  static const String aboutUs = 'About us';
 
   //contact us
-  static const String  contactus   = 'Contact us';
-  static const String  messageType   = 'Message Type';
-  static const String  messageContent   = 'Message Content';
-  static const String  contactUsNow   = 'Contact us now!';
-  static const String  thankYouForContactUs   = 'Thank You For Contact Us';
-  static const String messageWillSendToYourEmail   = 'Message Will Send to Your Email';
-  static const String complaint   = 'Complaint';
-  static const String suggestion   = 'Suggestion';
+  static const String contactus = 'Contact us';
+  static const String messageType = 'Message Type';
+  static const String messageContent = 'Message Content';
+  static const String contactUsNow = 'Contact us now!';
+  static const String thankYouForContactUs = 'Thank You For Contact Us';
+  static const String messageWillSendToYourEmail =
+      'Message Will Send to Your Email';
+  static const String complaint = 'Complaint';
+  static const String suggestion = 'Suggestion';
 
   //Shop
-  static const String products   = 'Products';
-  static const String  offers  = 'Offers';
-  static const String  addToCart  = 'Add to Cart';
+  static const String products = 'Products';
+  static const String offers = 'Offers';
+  static const String addToCart = 'Add to Cart';
 
   //shop about
-  static const String about    = 'About ';
-  static const String  ourBranches  = 'Our Branches :';
-  static const String availablePaymentMethods   = 'Available Payment methods : ';
-  static const String  reviews   = 'Reviews : ';
-  static const String  summary  = 'Summary : ';
-  static const String  images    = 'Images : ';
-  static const String address    = 'Address :';
-  static const String locationOnMap   = 'Location on map :';
-  static const String  workTimes = 'Work times :';
-  static const String  pressHere = 'Press Here';
+  static const String about = 'About ';
+  static const String ourBranches = 'Our Branches :';
+  static const String availablePaymentMethods = 'Available Payment methods : ';
+  static const String reviews = 'Reviews : ';
+  static const String summary = 'Summary : ';
+  static const String images = 'Images : ';
+  static const String address = 'Address :';
+  static const String locationOnMap = 'Location on map :';
+  static const String workTimes = 'Work times :';
+  static const String pressHere = 'Press Here';
 
   //Branches
-  static const String  branches  = 'Branches';
+  static const String branches = 'Branches';
 
   //search
-  static const String   distance = 'Distance :  ';
-  static const String  sorting  = 'Sorting';
-  static const String   filter = 'Filter';
+  static const String distance = 'Distance :  ';
+  static const String sorting = 'Sorting';
+  static const String filter = 'Filter';
 
   //Product
-  static const String  product  = 'Product';
-  static const String  description  = 'Description :';
-  static const String  brand  = 'Brand :';
-  static const String  price  = 'Price :';
-  static const String  similarProducts  = 'Similar Products';
- // static const String    = '';
- // static const String    = '';
- // static const String    = '';
- // static const String    = '';
- // static const String    = '';
- // static const String    = '';
+  static const String product = 'Product';
+  static const String description = 'Description :';
+  static const String brand = 'Brand : ';
+  static const String price = 'Price : ';
+  static const String similarProducts = 'Similar Products';
+
+// wish list
+  static const String shops = 'Shops';
+
+//my orders
+  static const String active = 'Active';
+  static const String past = 'Past';
+  static const String reviewing = 'Reviewing';
+  static const String preparing = 'Preparing';
+  static const String inWay = 'In Way';
+  static const String receiving = 'Receiving';
+  static const String showOrderDetails = 'Show Order Details';
+  static const String rejected = 'Rejected';
+
+//Order Details
+  static const String orderDetails = 'Order Details';
+  static const String deliveryFees = 'Delivery Fees';
+  static const String total = 'Total';
+  static const String paymentMethod = 'Payment Method';
+  static const String yourOrder = 'Your Order';
+  static const String buyer = 'Buyer';
+  static const String deliverTo = 'Deliver To';
+  static const String landMark = 'Land Mark : ';
+
+  //saved addresses
+  static const String totalPrice = 'Total Price : ';
+  static const String Continue = 'continue';
+  static const String notes = 'Notes';
+
+// order summary
+  static const String orderSummery = 'Order Summery';
+  static const String yourOrderPrice = 'Your order  Price : ';
+  static const String specifyDeliveryAddress = 'Specify delivery address';
+  static const String specifyDeliveryAddressToKnowDeliveryFees = 'Specify delivery address to know delivery fees';
+  static const String discountCoupon = 'Discount coupon';
+  static const String enterDiscountCouponCode = 'Enter discount coupon code';
+  static const String cash = 'Cash';
+  static const String visaFromHome = 'Visa From Home';
+  static const String creditCard = 'Credit Card';
+
+//order done
+  static const String yourOrderSendSuccessfully = 'Your Order Send Successfully';
+  static const String   thankYou = 'Thank You';
+  static const String  nextOrder  = 'Next Order';
+  static const String  continueShopping  = 'Continue Shopping';
+  static const String  orderNo  = 'Order No : ';
+// static const String    = '';
+// static const String    = '';
 }

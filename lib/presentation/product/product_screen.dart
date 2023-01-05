@@ -139,7 +139,7 @@ will be here bla bla will be here bla bla
                         fontFamily: FontConstants.fontFamily,
                       ),
                     ),
-                    const DriverWidget(),
+                    DriverWidget(),
                     Row(
                       children: [
                         Text(
@@ -164,7 +164,7 @@ will be here bla bla will be here bla bla
                         ),
                       ],
                     ),
-                    const DriverWidget(),
+                    DriverWidget(),
                     Row(
                       children: [
                         Text(
@@ -189,7 +189,7 @@ will be here bla bla will be here bla bla
                         ),
                       ],
                     ),
-                    const DriverWidget(),
+                    DriverWidget(),
                     Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
@@ -321,7 +321,7 @@ will be here bla bla will be here bla bla
                         )
                       ],
                     ),
-                    const DriverWidget(),
+                    DriverWidget(),
                     Center(
                       child: Text(
                         StringsManager.similarProducts,

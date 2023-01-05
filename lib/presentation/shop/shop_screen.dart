@@ -155,7 +155,7 @@ class ShopScreen extends StatelessWidget {
                     ),
                     child: Column(
                       children: [
-                        const DriverWidget(),
+                        DriverWidget(),
 
                         //product and offers
                         Row(
