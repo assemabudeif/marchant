@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:marchant/presentation/home/home_screen.dart';
+import 'package:marchant/presentation/home/home_layout.dart';
 import 'package:marchant/presentation/resources/colors_manager.dart';
 import 'package:marchant/presentation/resources/font_manager.dart';
 import 'package:marchant/presentation/resources/strings_manager.dart';
@@ -98,7 +98,7 @@ class CarOrderDoneScreen extends StatelessWidget {
                       Navigator.pushAndRemoveUntil(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => HomeScreen(),
+                          builder: (context) => HomeLayout(),
                         ),
                         (rout) {
                           return false;

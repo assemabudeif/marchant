@@ -279,7 +279,7 @@ class AccountScreen extends StatelessWidget {
                               //twitter
                               AccountItemWidget(
                                 text: StringsManager.twitter,
-                                image: ImageAssets.addressesIcon,
+                                image: ImageAssets.twitterIcon,
                                 onTap: () {},
                               ),
 

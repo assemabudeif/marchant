@@ -9,10 +9,12 @@ class LocationMarkFloatWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton(
       backgroundColor: ColorManager.primaryLight,
-      onPressed: () {  },
-      child:  const Icon(Icons.location_on_rounded,
-
-        size: AppSize.s32,),
+      onPressed: () {},
+      child: const Icon(
+        Icons.location_on_rounded,
+        color: ColorManager.white,
+        size: AppSize.s32,
+      ),
     );
   }
 }

@@ -47,34 +47,69 @@ class ShopCubit extends Cubit<ShopState> {
   bool isProducts = false;
   bool isOffers = true;
 
-  void changeButton(String type){
-    if(type == 'products'){
+  void changeButton(String type) {
+    if (type == 'products') {
       isProducts = true;
       isOffers = false;
     }
-    if(type == 'offers'){
+    if (type == 'offers') {
       isProducts = false;
       isOffers = true;
     }
 
     emit(ChangeButtonState());
   }
-  void changeFavorite(){
-    isFavorite = !isFavorite;
 
+  void changeFavorite() {
+    isFavorite = !isFavorite;
 
     emit(ChangeFavoriteState());
   }
+
   List<String> images = [
     for (int i = 0; i < 5; i++) ImageAssets.muskMarket,
   ];
 
   int activeIndex = 0;
-  void changeCarouselIndex( int index){
+
+  void changeCarouselIndex(int index) {
     activeIndex = index;
     emit(ChangeCarouselIndexState());
   }
+
   var controller = CarouselController();
 
+  List<ShopCategoryModel> filterModel = [
+    ShopCategoryModel(
+      name: 'Drinks',
+      image: ImageAssets.drinksImg,
+      isTaped: true,
+    ),
+    ShopCategoryModel(
+      name: 'Sweets',
+      image: ImageAssets.sweetsIcon,
+      isTaped: false,
+    ),
+    ShopCategoryModel(
+      name: 'Cleaners',
+      image: ImageAssets.cleaningProductIcon,
+      isTaped: false,
+    ),
+    ShopCategoryModel(
+      name: 'Foods',
+      image: ImageAssets.foodsIcon,
+      isTaped: false,
+    ),
+    ShopCategoryModel(
+      name: 'Sweets',
+      image: ImageAssets.sweetsIcon,
+      isTaped: false,
+    ),
+  ];
+  RangeValues priceValues = const RangeValues(500, 800);
 
+  void changePriceIndicator(value) {
+    priceValues = value;
+    emit(ChangePriceIndicatorState());
+  }
 }

@@ -229,6 +229,25 @@ of the printing and typesetting
   static const String  nextOrder  = 'Next Order';
   static const String  continueShopping  = 'Continue Shopping';
   static const String  orderNo  = 'Order No : ';
+
+//shop filter
+ static const String subCategories   = 'Sub Categories :';
+ static const String  brands  = 'Brands :';
+ static const String  from  = 'From';
+ static const String  to  = 'To';
+ static const String  EGP  = 'EGP';
+ static const String  apply  = 'Apply';
+ static const String  reset  = 'Reset';
+
+// search filter
+ static const String  higherRating  = 'Higher Rating';
+ static const String  fasterDelivery  = 'Faster delivery';
+ static const String  nearestLocation  = 'Nearest Location';
+ static const String   haveDelivery = 'Have Delivery';
+
+
+ static const String rateProduct   = 'Rate Product';
+// static const String    = '';
 // static const String    = '';
 // static const String    = '';
 }

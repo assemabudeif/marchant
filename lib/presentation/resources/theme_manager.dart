@@ -13,6 +13,7 @@ ThemeData getApplicationTheme() {
     disabledColor: ColorManager.grey1,
     splashColor: ColorManager.primaryLight,
     scaffoldBackgroundColor: ColorManager.white,
+    primarySwatch: ColorManager.themeColor,
 
     // cardTheme
 
@@ -65,5 +66,18 @@ ThemeData getApplicationTheme() {
     ),
 
     //input decoration theme (text form field)
+
+    sliderTheme: const SliderThemeData(
+      valueIndicatorColor: ColorManager.transparent,
+      valueIndicatorTextStyle: TextStyle(
+        color: ColorManager.primary,
+        fontWeight: FontWeightManager.medium
+      ),
+      thumbColor: ColorManager.primary,
+      activeTrackColor: ColorManager.primary,
+      inactiveTrackColor: ColorManager.greyDark,
+      inactiveTickMarkColor: ColorManager.transparent,
+      activeTickMarkColor: ColorManager.transparent
+    ),
   );
 }

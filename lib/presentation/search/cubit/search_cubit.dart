@@ -25,4 +25,33 @@ class SearchCubit extends Cubit<SearchState> {
 
     emit(ChangeButtonStata());
   }
+
+  RangeValues priceValues = const RangeValues(500, 800);
+
+  void changePriceIndicator(value) {
+    priceValues = value;
+    emit(ChangePriceIndicatorState());
+  }
+
+  bool isHigherRating = false;
+  bool isFasterDelivery = false;
+  bool isNearestLocation = false;
+  bool isHaveDelivery = false;
+
+  void changeCheckButtonState(String type) {
+    if (type == 'rate') {
+      isHigherRating = !isHigherRating;
+    }
+    if (type == 'faster') {
+      isFasterDelivery = !isFasterDelivery;
+    }
+    if (type == 'location') {
+      isNearestLocation = !isNearestLocation;
+    }
+    if (type == 'delivery') {
+      isHaveDelivery = !isHaveDelivery;
+    }
+    emit(ChangeCheckButtonState());
+  }
+
 }

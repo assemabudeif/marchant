@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:marchant/presentation/resources/assets_manager.dart';
 import 'package:marchant/presentation/resources/colors_manager.dart';
 import 'package:marchant/presentation/resources/font_manager.dart';
+import 'package:marchant/presentation/resources/routes_manager.dart';
 import 'package:marchant/presentation/resources/strings_manager.dart';
 import 'package:marchant/presentation/resources/values_manager.dart';
 import 'package:marchant/presentation/search/cubit/search_cubit.dart';
@@ -127,6 +128,8 @@ class SearchScreen extends StatelessWidget {
                           child: InkWell(
                             onTap: () {
                               cubit.changeButton('filter');
+                              Navigator.pushNamed(context, Routes.searchFilet);
+
                             },
                             child: Column(
                               children: [

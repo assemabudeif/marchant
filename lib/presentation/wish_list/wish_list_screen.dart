@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:marchant/presentation/resources/assets_manager.dart';
 import 'package:marchant/presentation/resources/colors_manager.dart';
 import 'package:marchant/presentation/resources/font_manager.dart';
+import 'package:marchant/presentation/resources/routes_manager.dart';
 import 'package:marchant/presentation/resources/strings_manager.dart';
 import 'package:marchant/presentation/resources/values_manager.dart';
 import 'package:marchant/presentation/widgets/shop_search_bar_widget.dart';
@@ -177,10 +178,13 @@ class WishListScreen extends StatelessWidget {
             ),
             floatingActionButton: FloatingActionButton(
               backgroundColor: ColorManager.primaryLight,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, Routes.wishFilet);
+              },
               child: const Icon(
                 Icons.filter_alt_rounded,
                 size: AppSize.s32,
+                color: ColorManager.white,
               ),
             ),
             floatingActionButtonLocation:
