@@ -22,4 +22,21 @@ class ColorManager {
   static const Color facebook = Color(0xFF3b5998);
   static const Color google = Color(0xFFde5246);
   static const Color transparent = Color(0x00000000);
+
+  static const MaterialColor themeColor = MaterialColor(
+     0xFF54bad5,
+    <int, Color>{
+      50: Color(0xFF54bad5),
+      100: Color(0xFF54bad5),
+      200: Color(0xFF54bad5),
+      300: Color(0xFF54bad5),
+      400: Color(0xFF54bad5),
+      500: Color(0xFF54bad5),
+      600: Color(0xFF54bad5),
+      700: Color(0xFF54bad5),
+      800: Color(0xFF54bad5),
+      900: Color(0xFF54bad5),
+    },
+  );
+
 }

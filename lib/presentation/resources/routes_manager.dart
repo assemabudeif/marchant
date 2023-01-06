@@ -22,9 +22,12 @@ import 'package:marchant/presentation/product/product_screen.dart';
 
 import 'package:marchant/presentation/resources/strings_manager.dart';
 import 'package:marchant/presentation/reviews/reviews_screen.dart';
+import 'package:marchant/presentation/search/search_filter_screen.dart';
 import 'package:marchant/presentation/search/search_screen.dart';
 import 'package:marchant/presentation/shop/shop_about_screen.dart';
+import 'package:marchant/presentation/shop/shop_filter_screen.dart';
 import 'package:marchant/presentation/shop/shop_screen.dart';
+import 'package:marchant/presentation/wish_list/wish_filter_screen.dart';
 import 'package:marchant/presentation/wish_list/wish_list_screen.dart';
 
 class Routes {
@@ -54,6 +57,9 @@ class Routes {
   static const wishList = '/wish_list';
   static const myOrders = '/my_orders';
   static const cart = '/cart';
+  static const wishFilet = '/wishFilter';
+  static const shopFilet = '/shopFilter';
+  static const searchFilet = '/searchFilter';
 }
 
 class AppRoutes {
@@ -118,7 +124,14 @@ class AppRoutes {
         return MaterialPageRoute(builder: (context) => MyOrdersScreen());
       case Routes.cart:
         return MaterialPageRoute(builder: (context) => CartScreen());
-      // default:
+      case Routes.wishFilet:
+        return MaterialPageRoute(builder: (context) => WishListFilterScreen());
+      case Routes.shopFilet:
+        return MaterialPageRoute(builder: (context) => ShopFilterScreen());
+      case Routes.searchFilet:
+        return MaterialPageRoute(builder: (context) => SearchFilterScreen());
+
+    // default:
       //   return defaultRoute();
     }
   }

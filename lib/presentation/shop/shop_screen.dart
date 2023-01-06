@@ -51,7 +51,9 @@ class ShopScreen extends StatelessWidget {
                       fit: BoxFit.fill,
                     )),
                 IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, Routes.shopFilet);
+                    },
                     icon: Image.asset(ImageAssets.filterIcon)),
               ],
             ),

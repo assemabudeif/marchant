@@ -62,7 +62,8 @@ class ContactusScreen extends StatelessWidget {
                                     children: [
                                       IconButton(
                                           onPressed: () {
-                                            cubit.changeRadioButton('suggestion');
+                                            cubit.changeRadioButton(
+                                                'suggestion');
                                           },
                                           icon: Icon(
                                             cubit.isSuggestion
@@ -80,7 +81,8 @@ class ContactusScreen extends StatelessWidget {
                                             .titleMedium!
                                             .copyWith(
                                               fontSize: FontSizeManager.s14,
-                                              fontWeight: FontWeightManager.medium,
+                                              fontWeight:
+                                                  FontWeightManager.medium,
                                             ),
                                       ),
                                     ],
@@ -93,7 +95,8 @@ class ContactusScreen extends StatelessWidget {
                                     children: [
                                       IconButton(
                                           onPressed: () {
-                                            cubit.changeRadioButton('complaint');
+                                            cubit
+                                                .changeRadioButton('complaint');
                                           },
                                           icon: Icon(
                                             cubit.isComplaint
@@ -111,7 +114,8 @@ class ContactusScreen extends StatelessWidget {
                                             .titleMedium!
                                             .copyWith(
                                               fontSize: FontSizeManager.s14,
-                                              fontWeight: FontWeightManager.medium,
+                                              fontWeight:
+                                                  FontWeightManager.medium,
                                             ),
                                       ),
                                     ],
@@ -168,76 +172,78 @@ class ContactusScreen extends StatelessWidget {
                                   context: context,
                                   builder: (_) => AlertDialog(
                                     content: SingleChildScrollView(
-                                      child: Stack(
-                                        alignment: Alignment.topRight,
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.end,
                                         children: [
-                                          Padding(
-                                            padding: const EdgeInsetsDirectional
-                                                    .only(
-                                                // start: 1.0,
-                                                //bottom: 1.0,
-                                                ),
-                                            child: IconButton(
-                                                onPressed: () {
-                                                  Navigator.pop(context);
-                                                },
-                                                icon: const Icon(
-                                                  Icons.close,
-                                                  color: ColorManager.greyDark,
-                                                )),
-                                          ),
-                                          const SizedBox(
-                                            height: AppSize.s5,
-                                          ),
-                                          Column(
+                                          Row(
                                             mainAxisSize: MainAxisSize.min,
                                             crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
+                                                CrossAxisAlignment.end,
                                             children: [
-                                              Image.asset(
-                                                ImageAssets.smilyFaceIcon,
-                                                height: AppSize.s67,
-                                                width: AppSize.s67,
-                                              ),
-                                              const SizedBox(
-                                                height: AppSize.s24,
-                                              ),
-                                              Text(
-                                                StringsManager
-                                                    .thankYouForContactUs,
-                                                style: Theme.of(context)
-                                                    .textTheme
-                                                    .bodyLarge!
-                                                    .copyWith(
-                                                      color: ColorManager.black,
-                                                      fontSize:
-                                                          FontSizeManager.s18,
-                                                      fontWeight:
-                                                          FontWeightManager
-                                                              .bold,
-                                                    ),
-                                              ),
-                                              const SizedBox(
-                                                height: AppSize.s22,
-                                              ),
-                                              Text(
-                                                StringsManager
-                                                    .messageWillSendToYourEmail,
-                                                style: Theme.of(context)
-                                                    .textTheme
-                                                    .titleSmall!
-                                                    .copyWith(
-                                                      color: ColorManager.grey4,
-                                                      fontSize:
-                                                          FontSizeManager.s14,
-                                                      fontWeight:
-                                                          FontWeightManager
-                                                              .medium,
-                                                    ),
+                                              InkWell(
+                                                onTap: () {
+                                                  Navigator.pop(context);
+                                                },
+                                                child: const Icon(
+                                                  Icons.close,
+                                                  color: ColorManager.greyDark,
+                                                ),
                                               ),
                                             ],
+                                          ),
+                                          Center(
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.min,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.center,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Image.asset(
+                                                  ImageAssets.smilyFaceIcon,
+                                                  height: AppSize.s67,
+                                                  width: AppSize.s67,
+                                                ),
+                                                const SizedBox(
+                                                  height: AppSize.s24,
+                                                ),
+                                                Text(
+                                                  StringsManager
+                                                      .thankYouForContactUs,
+                                                  style: Theme.of(context)
+                                                      .textTheme
+                                                      .bodyLarge!
+                                                      .copyWith(
+                                                        color:
+                                                            ColorManager.black,
+                                                        fontSize:
+                                                            FontSizeManager.s18,
+                                                        fontWeight:
+                                                            FontWeightManager
+                                                                .bold,
+                                                      ),
+                                                ),
+                                                const SizedBox(
+                                                  height: AppSize.s22,
+                                                ),
+                                                Text(
+                                                  StringsManager
+                                                      .messageWillSendToYourEmail,
+                                                  style: Theme.of(context)
+                                                      .textTheme
+                                                      .titleSmall!
+                                                      .copyWith(
+                                                        color:
+                                                            ColorManager.grey4,
+                                                        fontSize:
+                                                            FontSizeManager.s14,
+                                                        fontWeight:
+                                                            FontWeightManager
+                                                                .medium,
+                                                      ),
+                                                ),
+                                              ],
+                                            ),
                                           ),
                                           //
                                         ],
