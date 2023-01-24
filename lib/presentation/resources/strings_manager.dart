@@ -205,7 +205,7 @@ of the printing and typesetting
   static const String yourOrder = 'Your Order';
   static const String buyer = 'Buyer';
   static const String deliverTo = 'Deliver To';
-  static const String landMark = 'Land Mark : ';
+  static const String landMark = 'Land Mark';
 
   //saved addresses
   static const String totalPrice = 'Total Price : ';
@@ -247,6 +247,19 @@ of the printing and typesetting
 
 
  static const String rateProduct   = 'Rate Product';
+
+
+ static const String  addNewAddress  = 'Add New Address';
+ static const String  addressTitle  = 'Address Title';
+ static const String  city  = 'City';
+ static const String  area = 'Area';
+ static const String addressName = 'Address Name';
+ static const String  addressNameWillBeHere = 'Address Name will be here (ex. Ramses elgomgoria street)';
+ static const String  areaOrStreet = 'Area Or Street';
+ static const String homeOrBuildingNumber  = 'Home Or Building Number';
+ static const String  floorDepartment  = 'Floor - Department';
+ static const String receiverName   = 'Receiver Name';
+ static const String  mobileNumber   = 'Mobile Number';
 // static const String    = '';
 // static const String    = '';
 // static const String    = '';

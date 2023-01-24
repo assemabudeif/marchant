@@ -5,6 +5,7 @@ import 'package:marchant/presentation/cart/cubit/cart_cubit.dart';
 import 'package:marchant/presentation/cart/cubit/cart_state.dart';
 import 'package:marchant/presentation/resources/colors_manager.dart';
 import 'package:marchant/presentation/resources/font_manager.dart';
+import 'package:marchant/presentation/resources/routes_manager.dart';
 import 'package:marchant/presentation/resources/strings_manager.dart';
 import 'package:marchant/presentation/resources/values_manager.dart';
 import 'package:marchant/presentation/widgets/cart_bottom_navigation_bar_widget.dart';
@@ -35,7 +36,9 @@ class CartSaveAddressesScreen extends StatelessWidget {
               title: 'Musk Market',
               actions: [
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, Routes.addNewAddress);
+                  },
                   child: const Text(
                     '+ ${StringsManager.notes}',
                     style: TextStyle(

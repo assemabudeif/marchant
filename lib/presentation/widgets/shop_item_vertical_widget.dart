@@ -103,72 +103,73 @@ class ShopItemVerticalWidget extends StatelessWidget {
                     //cart
                     Row(
                       children: [
-                        // cart
-
                         inCart
                             //in cart
                             ? Expanded(
-                                child: Row(
-                                  children: [
-                                    Container(
-                                      height: AppSize.s32,
-                                      width: AppSize.s32,
-                                      decoration: BoxDecoration(
-                                        borderRadius:
-                                            BorderRadius.circular(AppSize.s10),
-                                        color: ColorManager.grey4,
-                                      ),
-                                      child: Center(
-                                        child: IconButton(
-                                          onPressed: () {},
-                                          icon: const Text(
-                                            '-',
-                                            style: TextStyle(
-                                              color: ColorManager.white,
-                                              fontSize: AppSize.s22,
-                                            ),
-                                          ),
-                                          padding: EdgeInsets.zero,
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(vertical: AppPadding.p8),
+                                  child: Row(
+                                    children: [
+                                      Container(
+                                        height: AppSize.s32,
+                                        width: AppSize.s32,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(AppSize.s10),
+                                          color: ColorManager.grey4,
                                         ),
-                                      ),
-                                    ),
-                                    Expanded(
-                                      child: Center(
-                                        child: Text(
-                                          '1 Kg',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .titleSmall!
-                                              .copyWith(
-                                                color: ColorManager.primary,
-                                                fontSize: AppSize.s16,
-                                                fontFamily:
-                                                    FontConstants.fontFamily,
+                                        child: Center(
+                                          child: IconButton(
+                                            onPressed: () {},
+                                            icon: const Text(
+                                              '-',
+                                              style: TextStyle(
+                                                color: ColorManager.white,
+                                                fontSize: AppSize.s22,
                                               ),
-                                        ),
-                                      ),
-                                    ),
-                                    Container(
-                                      height: AppSize.s32,
-                                      width: AppSize.s32,
-                                      decoration: BoxDecoration(
-                                        borderRadius:
-                                            BorderRadius.circular(AppSize.s10),
-                                        color: ColorManager.primaryLight,
-                                      ),
-                                      child: Center(
-                                        child: IconButton(
-                                          onPressed: () {},
-                                          icon: const Icon(
-                                            Icons.add,
-                                            color: ColorManager.white,
-                                            size: AppSize.s22,
+                                            ),
+                                            padding: EdgeInsets.zero,
                                           ),
-                                          padding: EdgeInsets.zero,
                                         ),
                                       ),
-                                    ),
-                                  ],
+                                      Expanded(
+                                        child: Center(
+                                          child: Text(
+                                            '1 Kg',
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .titleSmall!
+                                                .copyWith(
+                                                  color: ColorManager.primary,
+                                                  fontSize: AppSize.s16,
+                                                  fontFamily:
+                                                      FontConstants.fontFamily,
+                                                ),
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        height: AppSize.s32,
+                                        width: AppSize.s32,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(AppSize.s10),
+                                          color: ColorManager.primaryLight,
+                                        ),
+                                        child: Center(
+                                          child: IconButton(
+                                            onPressed: () {},
+                                            icon: const Icon(
+                                              Icons.add,
+                                              color: ColorManager.white,
+                                              size: AppSize.s22,
+                                            ),
+                                            padding: EdgeInsets.zero,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               )
                             //add to cart
