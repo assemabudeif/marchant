@@ -54,7 +54,7 @@ class ShopScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushNamed(context, Routes.shopFilet);
                     },
-                    icon: Image.asset(ImageAssets.filterIcon)),
+                    icon: SvgPicture.asset(ImageAssets.filterIcon)),
               ],
             ),
             body: SingleChildScrollView(
@@ -90,6 +90,16 @@ class ShopScreen extends StatelessWidget {
                             const Spacer(),
                             IconButton(
                               onPressed: () {
+                                Navigator.pushNamed(context, Routes.shopAbout);
+                              },
+                              icon: CircleAvatar(
+                                radius: AppSize.s25,
+                                backgroundColor: ColorManager.accent,
+                                child: SvgPicture.asset(ImageAssets.aboutImage),
+                              ),
+                            ),
+                            IconButton(
+                              onPressed: () {
                                 cubit.changeFavorite();
                               },
                               icon: CircleAvatar(
@@ -106,25 +116,12 @@ class ShopScreen extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            IconButton(
-                              onPressed: () {
-                                Navigator.pushNamed(context, Routes.shopAbout);
-                              },
-                              icon: const CircleAvatar(
-                                radius: AppSize.s25,
-                                backgroundColor: ColorManager.accent,
-                                child: Icon(
-                                  Icons.info_outline,
-                                  size: AppSize.s19,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
                           ],
                         ),
                       ),
                     ],
                   ),
+
                   //categories
                   Padding(
                     padding: const EdgeInsets.only(
@@ -285,7 +282,7 @@ class ShopScreen extends StatelessWidget {
                               image: ImageAssets.lanshonOffer,
                               rate: 4,
                             ),
-                           const Spacer(),
+                            const Spacer(),
                             ShopItemVerticalWidget(
                               inCart: true,
                               isFavorite: true,

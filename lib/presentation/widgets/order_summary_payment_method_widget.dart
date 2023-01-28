@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:marchant/presentation/resources/assets_manager.dart';
 import 'package:marchant/presentation/resources/colors_manager.dart';
 import 'package:marchant/presentation/resources/font_manager.dart';
@@ -38,7 +39,7 @@ class OrderSummaryPaymentMethodWidget extends StatelessWidget {
                   ),
                 ),
                 const Spacer(),
-                Image.asset(ImageAssets.creditCardCartIcon),
+                SvgPicture.asset(ImageAssets.creditCardCartIcon),
               ],
             ),
           ),
@@ -54,7 +55,7 @@ class OrderSummaryPaymentMethodWidget extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Image.asset(ImageAssets.dollarIcon),
+                    SvgPicture.asset(ImageAssets.dollarIcon),
                     const SizedBox(
                       width: AppSize.s8,
                     ),
@@ -80,7 +81,7 @@ class OrderSummaryPaymentMethodWidget extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    Image.asset(ImageAssets.visaIcon),
+                    SvgPicture.asset(ImageAssets.visaIcon),
                     const SizedBox(
                       width: AppSize.s8,
                     ),
@@ -106,7 +107,7 @@ class OrderSummaryPaymentMethodWidget extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    Image.asset(ImageAssets.creditIcon),
+                    SvgPicture.asset(ImageAssets.creditIcon),
                     const SizedBox(
                       width: AppSize.s8,
                     ),

@@ -44,7 +44,7 @@ class ShopSearchBarWidget extends StatelessWidget {
             const Spacer(),
             IconButton(
                 onPressed: () {},
-                icon: Image.asset(
+                icon: SvgPicture.asset(
                   ImageAssets.sortingIcon,
                   width: AppSize.s14,
                   height: AppSize.s14,

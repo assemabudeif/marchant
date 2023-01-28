@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:marchant/presentation/resources/assets_manager.dart';
 import 'package:marchant/presentation/resources/colors_manager.dart';
 import 'package:marchant/presentation/resources/values_manager.dart';
@@ -46,11 +47,11 @@ class CartProgressLineWidget extends StatelessWidget {
                     pageNum > 1 ? ColorManager.primary : ColorManager.greyDark,
                 size: 50,
               ),
-              Image.asset(
+              SvgPicture.asset(
                 ImageAssets.creditCardCartIcon,
                 color: pageNum > 1 ? ColorManager.white : ColorManager.greyDark,
-                height: AppSize.s22,
-                width: AppSize.s22,
+                height: AppSize.s19,
+                width: AppSize.s19,
               ),
             ],
           ),
@@ -70,7 +71,7 @@ class CartProgressLineWidget extends StatelessWidget {
                     pageNum > 2 ? ColorManager.primary : ColorManager.greyDark,
                 size: 50,
               ),
-              Image.asset(ImageAssets.myOrderIcon,
+              SvgPicture.asset(ImageAssets.myOrderIcon,
                   color:
                       pageNum > 2 ? ColorManager.white : ColorManager.greyDark),
             ],

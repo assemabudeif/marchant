@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:marchant/presentation/resources/colors_manager.dart';
 import 'package:marchant/presentation/resources/values_manager.dart';
 
@@ -27,7 +28,7 @@ class ReviewItemWidget extends StatelessWidget {
             CircleAvatar(
               backgroundColor: ColorManager.primaryMoreLight,
               radius: 28,
-              child: Image.asset(
+              child: SvgPicture.asset(
                 image,
                 height: AppSize.s55,
                 width: AppSize.s55,

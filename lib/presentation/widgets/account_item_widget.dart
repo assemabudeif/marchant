@@ -1,29 +1,38 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:marchant/presentation/resources/colors_manager.dart';
 import 'package:marchant/presentation/resources/values_manager.dart';
 
 class AccountItemWidget extends StatelessWidget {
-  const AccountItemWidget({
+   AccountItemWidget({
     Key? key,
     required this.text,
     required this.onTap,
     required this.image,
+    this.png = false
   }) : super(key: key);
   final String text;
   final String image;
   final Function() onTap;
+  bool png;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: AppPadding.p30),
+        padding: const EdgeInsets.only(
+          left: AppPadding.p30,
+          right: AppPadding.p30,
+          bottom: AppPadding.p17
+        ),
         child: Row(
           children: [
             SizedBox(
               width: AppSize.s44,
-              child: Image.asset(
+              child: png? Image.asset(
+                image,
+              ) :SvgPicture.asset(
                 image,
               ),
             ),

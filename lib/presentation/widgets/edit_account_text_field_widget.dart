@@ -1,6 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:marchant/presentation/resources/assets_manager.dart';
 import 'package:marchant/presentation/resources/colors_manager.dart';
 import 'package:marchant/presentation/resources/font_manager.dart';
@@ -76,7 +77,7 @@ class _EditAccountTextFieldWidgetState
                 widget.onPress!();
               }
             },
-            icon: Image.asset(
+            icon: SvgPicture.asset(
               ImageAssets.editIcon,
               height: AppSize.s18,
               width: AppSize.s18,

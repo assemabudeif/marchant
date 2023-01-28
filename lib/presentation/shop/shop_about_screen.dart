@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:marchant/presentation/resources/assets_manager.dart';
 import 'package:marchant/presentation/resources/colors_manager.dart';
 import 'package:marchant/presentation/resources/font_manager.dart';
@@ -421,10 +422,10 @@ class ShopAboutScreen extends StatelessWidget {
                           child: Stack(
                             alignment: Alignment.center,
                             children: [
-                              Image.asset(
+                              SvgPicture.asset(
                                 ImageAssets.shopLocationOnMap,
                               ),
-                              Image.asset(
+                              SvgPicture.asset(
                                 ImageAssets.shopRectangleImag,
                               ),
                               Column(

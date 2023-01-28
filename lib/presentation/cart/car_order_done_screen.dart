@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:marchant/presentation/home/home_layout.dart';
 import 'package:marchant/presentation/resources/colors_manager.dart';
 import 'package:marchant/presentation/resources/font_manager.dart';
+import 'package:marchant/presentation/resources/routes_manager.dart';
 import 'package:marchant/presentation/resources/strings_manager.dart';
 import 'package:marchant/presentation/resources/values_manager.dart';
 import 'package:marchant/presentation/widgets/cart_progress_line_widget.dart';
@@ -84,7 +84,10 @@ class CarOrderDoneScreen extends StatelessWidget {
 
                   // next order
                   DefaultButtonWidget(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, Routes.home, (route) => false);
+                    },
                     text: StringsManager.nextOrder,
                     radius: AppSize.s24,
                   ),
@@ -95,15 +98,8 @@ class CarOrderDoneScreen extends StatelessWidget {
                   //continue Shopping
                   DefaultButtonWidget(
                     onPressed: () {
-                      Navigator.pushAndRemoveUntil(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => HomeLayout(),
-                        ),
-                        (rout) {
-                          return false;
-                        },
-                      );
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, Routes.home, (route) => false);
                     },
                     text: StringsManager.continueShopping,
                     radius: AppSize.s24,

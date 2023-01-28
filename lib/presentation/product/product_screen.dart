@@ -31,10 +31,7 @@ class ProductScreen extends StatelessWidget {
               actions: [
                 IconButton(
                   onPressed: () {},
-                  icon: const Icon(
-                    Icons.share_rounded,
-                    color: ColorManager.primary,
-                  ),
+                  icon: SvgPicture.asset(ImageAssets.shareIcon),
                 ),
               ],
             ),
