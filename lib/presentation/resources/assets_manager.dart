@@ -39,52 +39,63 @@ class ImageAssets {
   static const String alOthiemNearest = '$imagePath/al_othiem_nearest.png';
   static const String elGizawyNearest = '$imagePath/el_gizawy_nearest.png';
 
-  static const String profileImage = '$imagePath/profile_image.png';
-  static const String heartIcon = '$imagePath/heart_icon.png';
-  static const String editIcon = '$imagePath/edit_icon.png';
-  static const String addressesIcon = '$imagePath/addresses_icon.png';
-  static const String myOrderIcon = '$imagePath/my_order_icon.png';
-  static const String logoutIcon = '$imagePath/logout_icon.png';
-  static const String languageIcon = '$imagePath/language_icon.png';
-  static const String facebookIcon = '$imagePath/facebook_icon.png';
-  static const String instagramIcon = '$imagePath/instagram_icon.png';
+  static const String profileImage = '$imagePath/profile_image.svg';
+  static const String heartIcon = '$imagePath/heart_icon.svg';
+  static const String editIcon = '$imagePath/edit_icon.svg';
+  static const String addressesIcon = '$imagePath/addresses_icon.svg';
+  static const String myOrderIcon = '$imagePath/my_order_icon.svg';
+  static const String logoutIcon = '$imagePath/logout_icon.svg';
+  static const String languageIcon = '$imagePath/language_icon.svg';
+  static const String facebookIcon = '$imagePath/facebook_icon.svg';
+  static const String instagramIcon = '$imagePath/instagram_icon.svg';
   static const String starIcon = '$imagePath/star_icon.png';
-  static const String termsIcon = '$imagePath/terms_icon.png';
-  static const String twitterIcon = '$imagePath/twitter_icon.png';
-  static const String shareIcon = '$imagePath/share_icon.png';
-  static const String privacyIcon = '$imagePath/privacy_icon.png';
-  static const String phoneIcon = '$imagePath/phone_icon.png';
-  static const String notificationIcon = '$imagePath/notification_icon.png';
-  static const String legalIcon = '$imagePath/legal_icon.png';
-  static const String helpIcon = '$imagePath/help_icon.png';
-  static const String creditIcon = '$imagePath/credit_card_icon.png';
-  static const String alnassyaIcon = '$imagePath/3alnassya_icon.png';
-  static const String aboutIcon = '$imagePath/about_icon.png';
-  static const String callIcon = '$imagePath/call_icon.png';
-  static const String messageIcon = '$imagePath/message_icon.png';
-  static const String smilyFaceIcon = '$imagePath/smily_face_icon.png';
-  static const String filterIcon = '$imagePath/filter_icon.png';
+  static const String termsIcon = '$imagePath/terms_icon.svg';
+  static const String twitterIcon = '$imagePath/twitter_icon.svg';
+  static const String shareIcon = '$imagePath/share_icon.svg';
+  static const String privacyIcon = '$imagePath/privacy_icon.svg';
+  static const String phoneIcon = '$imagePath/phone_icon.svg';
+  static const String notificationIcon = '$imagePath/notification_icon.svg';
+  static const String legalIcon = '$imagePath/legal_icon.svg';
+  static const String helpIcon = '$imagePath/help_icon.svg';
+  static const String creditIcon = '$imagePath/credit_card_icon.svg';
+  static const String alnassyaIcon = '$imagePath/3alnassya_icon.svg';
+  static const String aboutIcon = '$imagePath/about_icon.svg';
+
+  static const String callIcon = '$imagePath/call_icon.svg';
+  static const String messageIcon = '$imagePath/message_icon.svg';
+  static const String smilyFaceIcon = '$imagePath/smily_face_icon.svg';
+
+  static const String filterIcon = '$imagePath/filter_icon.svg';
   static const String muskMarket = '$imagePath/musk_market_img.png';
-  static const String shadoImage = '$imagePath/shado_img.png';
-  static const String aboutImage = '$imagePath/about_img.png';
-  static const String allIcon = '$imagePath/all_icon.png';
-  static const String squareIcon = '$imagePath/square_icon.png';
-  static const String drinksImg = '$imagePath/drinks_img.png';
-  static const String sweetsIcon = '$imagePath/sweets_icon.png';
-  static const String cleaningProductIcon = '$imagePath/cleaning_product_icon.png';
-  static const String foodsIcon = '$imagePath/foods_icon.png';
-  static const String whiteSquare = '$imagePath/white_square.png';
-  static const String sortingIcon = '$imagePath/sorting_icon.png';
+  static const String shadoImage = '$imagePath/shado_img.svg';
+  static const String aboutImage = '$imagePath/about_img.svg';
+  static const String allIcon = '$imagePath/all_icon.svg';
+  static const String squareIcon = '$imagePath/square_icon.svg';
+  static const String drinksImg = '$imagePath/drinks_img.svg';
+  static const String sweetsIcon = '$imagePath/sweets_icon.svg';
+  static const String cleaningProductIcon = '$imagePath/cleaning_product_icon.svg';
+  static const String foodsIcon = '$imagePath/foods_icon.svg';
+  static const String whiteSquare = '$imagePath/white_square.svg';
+  static const String sortingIcon = '$imagePath/sorting_icon.svg';
+  static const String sideMenuIcon = '$imagePath/side_menu_icon.svg';
   static const String lanshonOffer = '$imagePath/lanshon_offer.png';
-  static const String shopLocationOnMap = '$imagePath/shop_location_on_map.png';
-  static const String shopRectangleImag = '$imagePath/shop_rectangle_imag.png';
-  static const String reviewUserImg = '$imagePath/review_user_img.png';
+
+  static const String shopLocationOnMap = '$imagePath/shop_location_on_map.svg';
+  static const String shopRectangleImag = '$imagePath/shop_rectangle_imag.svg';
+
+  static const String reviewUserImg = '$imagePath/review_user_img.svg';
   static const String freshMarket = '$imagePath/fresh_market.png';
-  static const String addToBasketIcon = '$imagePath/add_to_basket_icon.png';
-  static const String creditCardCartIcon = '$imagePath/credit_card_cart_icon.png';
-  static const String discountCouponIcon = '$imagePath/discount_coupon_icon.png';
-  static const String dollarIcon = '$imagePath/dollar_icon.png';
-  static const String visaIcon = '$imagePath/visa_icon.png';
-// static const String Icon = '$imagePath/_icon.png';
-// static const String Icon = '$imagePath/_icon.png';
+  static const String addToBasketIcon = '$imagePath/add_to_basket_icon.svg';
+
+  static const String creditCardCartIcon = '$imagePath/credit_card_cart_icon.svg';
+  static const String discountCouponIcon = '$imagePath/discount_coupon_icon.svg';
+  static const String dollarIcon = '$imagePath/dollar_icon.svg';
+  static const String visaIcon = '$imagePath/visa_icon.svg';
+
+  static const String egyptMap = '$imagePath/egypt_map.svg';
+
+
+// static const String  = '$imagePath/.svg';
+// static const String  = '$imagePath/.svg';
+// static const String  = '$imagePath/.png';
 }

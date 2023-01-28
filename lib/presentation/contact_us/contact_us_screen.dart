@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:marchant/presentation/contact_us/cubit/contact_us_cubit.dart';
 import 'package:marchant/presentation/contact_us/cubit/contact_us_state.dart';
 import 'package:marchant/presentation/resources/assets_manager.dart';
@@ -7,6 +8,7 @@ import 'package:marchant/presentation/resources/colors_manager.dart';
 import 'package:marchant/presentation/resources/font_manager.dart';
 import 'package:marchant/presentation/resources/strings_manager.dart';
 import 'package:marchant/presentation/resources/values_manager.dart';
+import 'package:marchant/presentation/widgets/contact_us_dialog_widget.dart';
 import 'package:marchant/presentation/widgets/default_button_widget.dart';
 import 'package:marchant/presentation/widgets/login_text_field_widget.dart';
 import 'package:marchant/presentation/widgets/white_app_bar_widget.dart';
@@ -170,86 +172,7 @@ class ContactusScreen extends StatelessWidget {
                               onPressed: () {
                                 showDialog(
                                   context: context,
-                                  builder: (_) => AlertDialog(
-                                    content: SingleChildScrollView(
-                                      child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.end,
-                                        children: [
-                                          Row(
-                                            mainAxisSize: MainAxisSize.min,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.end,
-                                            children: [
-                                              InkWell(
-                                                onTap: () {
-                                                  Navigator.pop(context);
-                                                },
-                                                child: const Icon(
-                                                  Icons.close,
-                                                  color: ColorManager.greyDark,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          Center(
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.min,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.center,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Image.asset(
-                                                  ImageAssets.smilyFaceIcon,
-                                                  height: AppSize.s67,
-                                                  width: AppSize.s67,
-                                                ),
-                                                const SizedBox(
-                                                  height: AppSize.s24,
-                                                ),
-                                                Text(
-                                                  StringsManager
-                                                      .thankYouForContactUs,
-                                                  style: Theme.of(context)
-                                                      .textTheme
-                                                      .bodyLarge!
-                                                      .copyWith(
-                                                        color:
-                                                            ColorManager.black,
-                                                        fontSize:
-                                                            FontSizeManager.s18,
-                                                        fontWeight:
-                                                            FontWeightManager
-                                                                .bold,
-                                                      ),
-                                                ),
-                                                const SizedBox(
-                                                  height: AppSize.s22,
-                                                ),
-                                                Text(
-                                                  StringsManager
-                                                      .messageWillSendToYourEmail,
-                                                  style: Theme.of(context)
-                                                      .textTheme
-                                                      .titleSmall!
-                                                      .copyWith(
-                                                        color:
-                                                            ColorManager.grey4,
-                                                        fontSize:
-                                                            FontSizeManager.s14,
-                                                        fontWeight:
-                                                            FontWeightManager
-                                                                .medium,
-                                                      ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                          //
-                                        ],
-                                      ),
-                                    ),
-                                  ),
+                                  builder: (_) => const ContactUsDialogWidget(),
                                 );
                               },
                             ),
@@ -274,7 +197,7 @@ class ContactusScreen extends StatelessWidget {
                               children: [
                                 IconButton(
                                     onPressed: () {},
-                                    icon: Image.asset(
+                                    icon: SvgPicture.asset(
                                       ImageAssets.callIcon,
                                       height: AppSize.s34,
                                       width: AppSize.s34,
@@ -284,7 +207,7 @@ class ContactusScreen extends StatelessWidget {
                                 ),
                                 IconButton(
                                     onPressed: () {},
-                                    icon: Image.asset(
+                                    icon: SvgPicture.asset(
                                       ImageAssets.messageIcon,
                                       height: AppSize.s34,
                                       width: AppSize.s34,

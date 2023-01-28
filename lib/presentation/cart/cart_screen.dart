@@ -93,7 +93,7 @@ class CartScreen extends StatelessWidget {
                               .toList(),
                           carouselController: cubit.controller,
                           options: CarouselOptions(
-                            height: AppSize.s70,
+                            height: AppSize.s124,
                             autoPlay: false,
                             initialPage: 0,
                             reverse: false,

@@ -11,6 +11,7 @@ import 'package:marchant/presentation/resources/values_manager.dart';
 import 'package:marchant/presentation/widgets/account_banner_widget.dart';
 import 'package:marchant/presentation/widgets/account_item_widget.dart';
 import 'package:marchant/presentation/widgets/driver_widget.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class AccountScreen extends StatelessWidget {
   const AccountScreen({Key? key}) : super(key: key);
@@ -37,10 +38,8 @@ class AccountScreen extends StatelessWidget {
                             const SizedBox(
                               height: AppSize.s15,
                             ),
-                            Image(
-                              image: AssetImage(
+                            SvgPicture.asset(
                                 ImageAssets.profileImage,
-                              ),
                               height: 65,
                               width: 65,
                               fit: BoxFit.cover,
@@ -56,7 +55,7 @@ class AccountScreen extends StatelessWidget {
                                     Navigator.pushNamed(
                                         context, Routes.accountInformation);
                                   },
-                                  child: Image.asset(
+                                  child: SvgPicture.asset(
                                     ImageAssets.editIcon,
                                     height: AppSize.s18,
                                     width: AppSize.s18,
@@ -79,7 +78,7 @@ class AccountScreen extends StatelessWidget {
                             const SizedBox(
                               height: AppSize.s8,
                             ),
-                            Text(
+                            const Text(
                               '01224344250',
                               style: TextStyle(
                                 color: ColorManager.greyDark,
@@ -149,13 +148,16 @@ class AccountScreen extends StatelessWidget {
                               InkWell(
                                 onTap: () {},
                                 child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: AppPadding.p30),
+                                  padding: const EdgeInsets.only(
+                                      left: AppPadding.p30,
+                                      right: AppPadding.p30,
+                                      bottom: AppPadding.p17
+                                  ),
                                   child: Row(
                                     children: [
                                       SizedBox(
                                         width: AppSize.s44,
-                                        child: Image.asset(
+                                        child: SvgPicture.asset(
                                           ImageAssets.languageIcon,
                                         ),
                                       ),
@@ -171,7 +173,7 @@ class AccountScreen extends StatelessWidget {
                                         ),
                                       ),
                                       const Spacer(),
-                                      Text(
+                                      const Text(
                                         'English',
                                         style: TextStyle(
                                           color: ColorManager.greyDark,
@@ -211,7 +213,7 @@ class AccountScreen extends StatelessWidget {
                           color: ColorManager.primaryMoreLight,
                           child: Row(
                             children: [
-                              Image.asset(
+                              SvgPicture.asset(
                                 ImageAssets.alnassyaIcon,
                               ),
                               const Spacer(),
@@ -301,6 +303,7 @@ class AccountScreen extends StatelessWidget {
                               AccountItemWidget(
                                 text: StringsManager.rateApplication,
                                 image: ImageAssets.starIcon,
+                                png: true,
                                 onTap: () {},
                               ),
 

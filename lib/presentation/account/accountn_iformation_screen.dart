@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:marchant/presentation/resources/assets_manager.dart';
 import 'package:marchant/presentation/resources/colors_manager.dart';
-import 'package:marchant/presentation/resources/font_manager.dart';
 import 'package:marchant/presentation/resources/routes_manager.dart';
 import 'package:marchant/presentation/resources/strings_manager.dart';
 import 'package:marchant/presentation/resources/values_manager.dart';
 import 'package:marchant/presentation/widgets/default_button_widget.dart';
 import 'package:marchant/presentation/widgets/edit_account_text_field_widget.dart';
+import 'package:marchant/presentation/widgets/white_app_bar_widget.dart';
 
 var emailController = TextEditingController();
 var nameController = TextEditingController();
@@ -24,14 +25,10 @@ class AccountInformationScreen extends StatelessWidget {
     phoneController.text = '01224344250';
     emailController.text = 'Medhat@yahoo.com';
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: ColorManager.primaryMoreLight,
-        title: Text('Account Information',
-            style: Theme.of(context)
-                .textTheme
-                .titleSmall!
-                .copyWith(color: ColorManager.primary)),
-        centerTitle: true,
+      appBar: whiteAppBarWidget(
+        context: context,
+        color: ColorManager.primaryMoreLight,
+        title: 'Account Information',
       ),
       body: Padding(
         padding: const EdgeInsets.all(AppPadding.p31),
@@ -45,16 +42,14 @@ class AccountInformationScreen extends StatelessWidget {
                   alignment: Alignment.bottomRight,
                   children: [
 
-                    Image(
-                      image: AssetImage(
-                        ImageAssets.profileImage,
-                      ),
+                    SvgPicture.asset(
+                      ImageAssets.profileImage,
                       height: AppSize.s60,
                       width: AppSize.s60,
                       fit: BoxFit.cover,
                     ),
-                    Padding(
-                      padding: const EdgeInsetsDirectional.only(
+                    const Padding(
+                      padding: EdgeInsetsDirectional.only(
                         bottom: 1.0,
                         end: 1.0,
                       ),

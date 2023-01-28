@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:marchant/presentation/my_orders/cubit/my_orders_cubit.dart';
 import 'package:marchant/presentation/my_orders/cubit/my_orders_state.dart';
 import 'package:marchant/presentation/resources/assets_manager.dart';
@@ -55,6 +56,7 @@ class OrderDetailsScreen extends StatelessWidget {
                 color: ColorManager.primaryMoreLight,
               ),
               body: SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
                 child: Padding(
                   padding: const EdgeInsets.all(AppPadding.p24),
                   child: Column(
@@ -217,7 +219,7 @@ class OrderDetailsScreen extends StatelessWidget {
                       //address
                       Row(
                         children: [
-                          Image.asset(
+                          SvgPicture.asset(
                             ImageAssets.myOrderIcon,
                             color: ColorManager.greyDark,
                             height: AppSize.s20,

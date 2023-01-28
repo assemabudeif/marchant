@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:marchant/presentation/resources/assets_manager.dart';
 import 'package:marchant/presentation/resources/colors_manager.dart';
 import 'package:marchant/presentation/resources/font_manager.dart';
@@ -27,10 +28,10 @@ class ShopCategoryItemWidget extends StatelessWidget {
           Stack(
             alignment: Alignment.center,
             children: [
-              Image.asset(
+              SvgPicture.asset(
                 isTaped ? ImageAssets.squareIcon : ImageAssets.whiteSquare,
               ),
-              Image.asset(
+              SvgPicture.asset(
                 image,
                 color: isTaped ? ColorManager.white : ColorManager.grey4,
               ),

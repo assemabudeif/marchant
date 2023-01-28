@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:marchant/presentation/cart/car_order_done_screen.dart';
 import 'package:marchant/presentation/cart/cubit/cart_cubit.dart';
 import 'package:marchant/presentation/cart/cubit/cart_state.dart';
@@ -163,7 +164,7 @@ class CartOrderSummaryScreen extends StatelessWidget {
                               ),
                             ),
                             const Spacer(),
-                            Image.asset(
+                            SvgPicture.asset(
                               ImageAssets.myOrderIcon,
                               color: ColorManager.grey2,
                             )
@@ -201,7 +202,7 @@ class CartOrderSummaryScreen extends StatelessWidget {
                                   ),
                                 ),
                                 const Spacer(),
-                                Image.asset(ImageAssets.discountCouponIcon),
+                                SvgPicture.asset(ImageAssets.discountCouponIcon),
                               ],
                             ),
                           ),
