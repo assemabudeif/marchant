@@ -194,7 +194,7 @@ class ShopAboutScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            StringsManager.availablePaymentMethods,
+                            StringsManager.reviews,
                             style: Theme.of(context)
                                 .textTheme
                                 .titleSmall!

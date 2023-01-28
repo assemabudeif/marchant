@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:marchant/presentation/product/cubit/product_cubit.dart';
 import 'package:marchant/presentation/product/cubit/product_state.dart';
 import 'package:marchant/presentation/resources/assets_manager.dart';
@@ -267,7 +268,9 @@ will be here bla bla will be here bla bla
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Image.asset(ImageAssets.addToBasketIcon),
+                                      SvgPicture.asset(
+                                        ImageAssets.addToBasketIcon,
+                                      ),
                                       SizedBox(
                                         width:
                                             MediaQuery.of(context).size.height *

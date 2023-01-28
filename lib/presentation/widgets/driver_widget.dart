@@ -5,8 +5,9 @@ class DriverWidget extends StatelessWidget {
   double? topSize;
   double? bottomSize;
   double? height;
+  Color? color;
 
-  DriverWidget({Key? key, this.bottomSize, this.topSize, this.height})
+  DriverWidget({Key? key, this.bottomSize, this.topSize, this.height, this.color})
       : super(key: key);
 
   @override
@@ -19,7 +20,7 @@ class DriverWidget extends StatelessWidget {
         Container(
           width: double.infinity,
           height: height ?? 1.0,
-          color: ColorManager.grey2,
+          color: color?? ColorManager.grey2,
         ),
         SizedBox(
           height: bottomSize ?? MediaQuery.of(context).size.height * 0.02,

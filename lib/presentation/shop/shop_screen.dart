@@ -285,6 +285,7 @@ class ShopScreen extends StatelessWidget {
                               image: ImageAssets.lanshonOffer,
                               rate: 4,
                             ),
+                           const Spacer(),
                             ShopItemVerticalWidget(
                               inCart: true,
                               isFavorite: true,

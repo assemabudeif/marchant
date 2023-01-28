@@ -277,7 +277,7 @@ Floor 6 - department 12''',
                                 Row(
                                   children: const [
                                     Text(
-                                      StringsManager.landMark,
+                                     '${ StringsManager.landMark } : ',
                                       style: TextStyle(
                                         color: ColorManager.greyDark,
                                         fontSize: AppSize.s15,

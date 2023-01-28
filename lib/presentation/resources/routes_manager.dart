@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:marchant/presentation/about/about_app_screen.dart';
 import 'package:marchant/presentation/account/account_screen.dart';
 import 'package:marchant/presentation/account/accountn_iformation_screen.dart';
+import 'package:marchant/presentation/add_new_address/add_new_address_screen.dart';
 import 'package:marchant/presentation/branches/branches_screen.dart';
 import 'package:marchant/presentation/cart/cart_screen.dart';
 import 'package:marchant/presentation/change_password/change_password_screen.dart';
@@ -60,6 +61,7 @@ class Routes {
   static const wishFilet = '/wishFilter';
   static const shopFilet = '/shopFilter';
   static const searchFilet = '/searchFilter';
+  static const addNewAddress = '/addNewAddress';
 }
 
 class AppRoutes {
@@ -130,7 +132,8 @@ class AppRoutes {
         return MaterialPageRoute(builder: (context) => ShopFilterScreen());
       case Routes.searchFilet:
         return MaterialPageRoute(builder: (context) => SearchFilterScreen());
-
+      case Routes.addNewAddress:
+        return MaterialPageRoute(builder: (context) => AddNewAddressScreen());
     // default:
       //   return defaultRoute();
     }
