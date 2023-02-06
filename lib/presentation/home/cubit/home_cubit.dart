@@ -1,12 +1,22 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:marchant/data/local/shared_prefrences.dart';
+import 'package:marchant/models/tokens/tokens_model.dart';
 import 'package:marchant/presentation/account/account_screen.dart';
 import 'package:marchant/presentation/cart/cart_screen.dart';
 import 'package:marchant/presentation/home/home_screen.dart';
 import 'package:marchant/presentation/resources/assets_manager.dart';
 import 'package:marchant/presentation/resources/strings_manager.dart';
+import 'package:marchant/utilis/consetant.dart';
 
+import '../../../models/tokens/tokens_error400_model.dart';
+import '../../../models/tokens/tokens_error_model.dart';
+import '../../../models/tokens/tokens_success_model.dart';
+import '../../../repository/repo.dart';
 import '../../categories/categories_screen.dart';
+
 part 'home_state.dart';
 
 class HomeCubit extends Cubit<HomeState> {
@@ -35,9 +45,7 @@ class HomeCubit extends Cubit<HomeState> {
       index: 2,
       text: StringsManager.cart,
       icon: ImageAssets.cart,
-      onPressed: () {
-
-      },
+      onPressed: () {},
     ),
     Items(
       index: 3,
@@ -56,7 +64,7 @@ class HomeCubit extends Cubit<HomeState> {
   void changeIndicatorIndex(double index) {
     emit(HomeInitial());
     indicatorIndex = index;
-    emit(ChangeIndicatorIndexState());
+    emit(HomeChangeIndicatorIndexState());
   }
 
   Widget? pages(context, index) {
@@ -66,7 +74,7 @@ class HomeCubit extends Cubit<HomeState> {
       case 1:
         return const CategoriesScreen();
       case 2:
-        return  Container();
+        return Container();
       case 3:
         return Container();
       case 4:
@@ -77,16 +85,36 @@ class HomeCubit extends Cubit<HomeState> {
 
   void changePageIndex(int index, context) {
     emit(HomeInitial());
-    if(index == 2){
+    if (index == 2) {
       Navigator.push(
         context,
-        MaterialPageRoute(
-            builder: (context) => CartScreen()
-        ),
+        MaterialPageRoute(builder: (context) => CartScreen()),
       );
-    }else{
-    currentIndex = index;}
-    emit(ChangePageIndexState());
+    } else {
+      currentIndex = index;
+    }
+    emit(HomeChangePageIndexState());
+  }
+
+  Future<void> getTokens() async {
+    emit(HomeGetTokensLoadingState());
+    TokensModel tokensModel = await Repository.instance.getToken();
+    if (tokensModel is TokensSuccessModel) {
+      log('Token: ${tokensModel.token!}');
+      token = tokensModel.token!;
+      SharedPref.setData(key: tokenKey, value: tokensModel.token);
+      refreshToken = tokensModel.refreshToken!;
+      SharedPref.setData(key: refreshTokenKey, value: tokensModel.refreshToken);
+      emit(HomeGetTokensSuccessState());
+    } else if (tokensModel is TokensError400Model) {
+      log(tokensModel.detail!);
+      emit(HomeGetTokensErrorState());
+    } else if (tokensModel is TokensErrorModel) {
+      for (var element in tokensModel.messages!) {
+        log(element);
+      }
+      emit(HomeGetTokensErrorState());
+    }
   }
 }
 

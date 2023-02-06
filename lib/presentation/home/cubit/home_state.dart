@@ -5,6 +5,12 @@ abstract class HomeState {}
 
 class HomeInitial extends HomeState {}
 
-class ChangeIndicatorIndexState extends HomeState {}
+class HomeChangeIndicatorIndexState extends HomeState {}
 
-class ChangePageIndexState extends HomeState {}
+class HomeChangePageIndexState extends HomeState {}
+
+class HomeGetTokensLoadingState extends HomeState {}
+
+class HomeGetTokensSuccessState extends HomeState {}
+
+class HomeGetTokensErrorState extends HomeState {}

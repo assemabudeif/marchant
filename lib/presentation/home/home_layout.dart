@@ -14,7 +14,8 @@ class HomeLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (BuildContext context) => HomeCubit()),
+        BlocProvider(
+            create: (BuildContext context) => HomeCubit()..getTokens()),
         BlocProvider(create: (BuildContext context) => CategoriesCubit()),
         BlocProvider(create: (BuildContext context) => CartCubit()),
       ],
